@@ -6,6 +6,7 @@ import { IstMap } from '../pages/istmap/istmap';
 import { Schedule } from '../pages/schedule/schedule';
 import { Announcements } from '../pages/announcements/announcements';
 import { Settings } from '../pages/settings/settings';
+import { Sponsors } from '../pages/sponsors/sponsors';
 
 
 @Component({
@@ -26,7 +27,8 @@ export class MyApp {
       { title: 'IST Map', component: IstMap },
       { title: 'Schedule', component: Schedule },
       { title: 'Announcements', component: Announcements },
-      { title: 'Settings', component: Settings }
+      { title: 'Settings', component: Settings },
+      { title: 'Sponsors', component: Sponsors }
     ];
 
   }

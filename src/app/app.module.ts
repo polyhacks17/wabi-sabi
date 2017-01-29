@@ -5,6 +5,7 @@ import { IstMap } from '../pages/istmap/istmap';
 import { Schedule } from '../pages/schedule/schedule';
 import { Announcements } from '../pages/announcements/announcements';
 import { Settings } from '../pages/settings/settings';
+import { Sponsors } from '../pages/sponsors/sponsors';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { Settings } from '../pages/settings/settings';
     IstMap,
     Schedule,
     Announcements,
-    Settings
+    Settings,
+    Sponsors
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -23,7 +25,8 @@ import { Settings } from '../pages/settings/settings';
     IstMap,
     Schedule,
     Announcements,
-    Settings
+    Settings,
+    Sponsors
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
