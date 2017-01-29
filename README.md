@@ -8,13 +8,11 @@ Work in progress, may eat your cat
 ##Build Instructions
 (First time only)
 
-`rm -rf node_modules`
-
 `npm install`
 
-(after the first time)
-
 `ionic add platform $platform_of_choice`
+
+(after the first time)
 
 `ionic build $platform_of_choice`
 
