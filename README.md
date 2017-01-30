@@ -2,8 +2,7 @@
 Work in progress, may eat your cat
 
 ##TODO
-- Make a map of the IST
-- Decide on a license
+- Remove all placeholders, replace with actual stuff
 
 ##Build Instructions
 (First time only)
