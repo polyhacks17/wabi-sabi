@@ -1,15 +1,15 @@
 #PolyHacks 2017 App
-Work in progress, may eat your cat
+:construction::rotating_light: Work in progress, may eat your cat :rotating_light::construction:
 
 ##TODO
 - Remove all placeholders, replace with actual stuff
 
-##Build Instructions
+##Build Instructions :wrench:
 (First time only)
 
 `npm install`
 
-`mkdir www` (don't ask why this is required, I have no idea)
+`mkdir www` (don't ask why this is required, just accept it as fact :books:)
 
 `ionic add platform $platform_of_choice`
 
@@ -25,7 +25,7 @@ Work in progress, may eat your cat
 
 (this just runs the app on your computer and lets you play with it in the browser)
 
-##Issues setting up the build environment
+##Issues setting up the build environment?
 If you get some error about node-sass, try this:
 
 `sudo ln -s /usr/bin/nodejs /usr/bin/node`
