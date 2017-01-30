@@ -24,7 +24,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'IST Map', component: IstMap },
+      { title: 'Map', component: IstMap },
       { title: 'Schedule', component: Schedule },
       { title: 'Announcements', component: Announcements },
       { title: 'Settings', component: Settings },
