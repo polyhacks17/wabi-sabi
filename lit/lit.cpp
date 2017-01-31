@@ -12,6 +12,7 @@ int post(string var1, string var2, string var3);
 int main(void)
 {
     start:
+    system("clear");
     string firstName, lastName, email;
     printHeader();
     cout << "Enter your first and last name: ";
@@ -22,7 +23,6 @@ int main(void)
     DEBUG(firstName, lastName, email);
     cout << "\nThank you for signing in, and enjoy the hackathon!\n";
     system("sleep 7");
-    system("clear");
     goto start;
 }
 
