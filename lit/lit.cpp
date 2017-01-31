@@ -48,8 +48,10 @@ void DEBUG(string firstName, string lastName, string email)
     cout << "\nDEBUG: lastName: " << lastName;
     cout << "\nDEBUG: email: " << email << endl;
 }
-int post(string nameFirst, string nameLast, string email){
-    string out = "curl -s -X POST -F \"entry.490737757=" + nameFirst + "\" -F \"entry.619299017=" + 
-                 nameLast + "\" -F \"submit=Submit\" https://docs.google.com/forms/d/e/1FAIpQLSfUEoJdiro$system(out.c_str());
-}
 
+int post(string nameFirst, string nameLast, string email)
+{
+    string out = "curl -s -X POST -F \"entry.490737757=" + nameFirst + "\" -F \"entry.619299017=" + 
+                 nameLast + "\" -F \"submit=Submit\" https://docs.google.com/forms/d/e/1FAIpQLSfUEoJdiro3aMaWmtff_9-Q6RVQyLOlcmKeJaoo7xE0MYBPrg/formResponse > /dev/null";
+    system(out.c_str());
+}
