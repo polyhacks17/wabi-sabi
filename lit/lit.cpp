@@ -19,7 +19,7 @@ int main(void)
     cin >> firstName >> lastName;
     cout << "Enter your email address: ";
     cin >> email;
-    post(firstName, lastName, ""); //TODO: fix <------
+    post(firstName, lastName, email); //TODO: fix <------
     DEBUG(firstName, lastName, email);
     cout << "\nThank you for signing in, and enjoy the hackathon!\n";
     system("sleep 7");
@@ -49,6 +49,6 @@ void DEBUG(string firstName, string lastName, string email)
 int post(string nameFirst, string nameLast, string email)
 {
     string out = "curl -s -X POST -F \"entry.490737757=" + nameFirst + "\" -F \"entry.619299017=" + 
-                 nameLast + "\" -F \"submit=Submit\" https://docs.google.com/forms/d/e/1FAIpQLSfUEoJdiro3aMaWmtff_9-Q6RVQyLOlcmKeJaoo7xE0MYBPrg/formResponse > /dev/null";
+                 nameLast + "\" -F \"entry.858391456=" + email + "\" -F \"submit=Submit\" https://docs.google.com/forms/d/e/1FAIpQLSfUEoJdiro3aMaWmtff_9-Q6RVQyLOlcmKeJaoo7xE0MYBPrg/formResponse > /dev/null";
     system(out.c_str());
 }
