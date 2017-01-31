@@ -7,6 +7,7 @@ using namespace std;
 
 void printHeader(void);
 void DEBUG(string var1, string var2, string var3);
+int post(string var1, string var2, string var3);
 
 int main(void)
 {
@@ -17,7 +18,7 @@ int main(void)
     cin >> firstName >> lastName;
     cout << "Enter your email address: ";
     cin >> email;
-    // TODO: submit data to server (hacky way: use 'curl')
+    post(firstName, lastName, ""); //TODO: fix <------
     DEBUG(firstName, lastName, email);
     cout << "\nThank you for signing in, and enjoy the hackathon!\n";
     system("sleep 7");
@@ -47,3 +48,8 @@ void DEBUG(string firstName, string lastName, string email)
     cout << "\nDEBUG: lastName: " << lastName;
     cout << "\nDEBUG: email: " << email << endl;
 }
+int post(string nameFirst, string nameLast, string email){
+    string out = "curl -s -X POST -F \"entry.490737757=" + nameFirst + "\" -F \"entry.619299017=" + 
+                 nameLast + "\" -F \"submit=Submit\" https://docs.google.com/forms/d/e/1FAIpQLSfUEoJdiro$system(out.c_str());
+}
+
