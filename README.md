@@ -7,7 +7,7 @@
 ##Build Instructions :wrench:
 (First time only)
 
-`npm install -g cordova ionic`
+`npm install -g cordova ionic` (you may have to run this command as sudo)
 
 `npm install`
 
