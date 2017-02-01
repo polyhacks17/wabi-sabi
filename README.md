@@ -7,9 +7,9 @@
 ##Build Instructions :wrench:
 (First time only)
 
-`npm install`
+`npm install -g cordova ionic`
 
-`mkdir www` (don't ask why this is required, just accept it as fact :books:)
+`npm install`
 
 `ionic add platform $platform_of_choice`
 
@@ -29,7 +29,3 @@
 If you get some error about node-sass, try this:
 
 `sudo ln -s /usr/bin/nodejs /usr/bin/node`
-
-If it tells you that this is not a Cordova project, try this:
-
-(from the project root) `mkdir www`
