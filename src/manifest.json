@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "PolyHacks 2017",
+  "short_name": "PolyHacks",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
