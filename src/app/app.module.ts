@@ -4,8 +4,8 @@ import { MyApp } from './app.component';
 import { IstMap } from '../pages/istmap/istmap';
 import { Schedule } from '../pages/schedule/schedule';
 import { Announcements } from '../pages/announcements/announcements';
-import { Credits } from '../pages/credits/credits';
 import { Sponsors } from '../pages/sponsors/sponsors';
+import { Credits } from '../pages/credits/credits';
 
 @NgModule({
   declarations: [
@@ -13,8 +13,8 @@ import { Sponsors } from '../pages/sponsors/sponsors';
     IstMap,
     Schedule,
     Announcements,
-    Credits,
-    Sponsors
+    Sponsors,
+    Credits
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -25,8 +25,8 @@ import { Sponsors } from '../pages/sponsors/sponsors';
     IstMap,
     Schedule,
     Announcements,
-    Credits,
-    Sponsors
+    Sponsors,
+    Credits
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

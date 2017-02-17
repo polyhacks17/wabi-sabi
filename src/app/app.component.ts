@@ -5,8 +5,8 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { IstMap } from '../pages/istmap/istmap';
 import { Schedule } from '../pages/schedule/schedule';
 import { Announcements } from '../pages/announcements/announcements';
-import { Credits } from '../pages/credits/credits';
 import { Sponsors } from '../pages/sponsors/sponsors';
+import { Credits } from '../pages/credits/credits';
 
 
 @Component({
@@ -27,8 +27,8 @@ export class MyApp {
       { title: 'Map', component: IstMap },
       { title: 'Schedule', component: Schedule },
       { title: 'Announcements', component: Announcements },
-      { title: 'Credits', component: Credits },
-      { title: 'Sponsors', component: Sponsors }
+      { title: 'Sponsors', component: Sponsors },
+      { title: 'Credits', component: Credits }
     ];
 
   }
