@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-settings',
-  templateUrl: 'settings.html'
+  selector: 'page-credits',
+  templateUrl: 'credits.html'
 })
-export class Settings {
+export class Credits {
 
   constructor(public navCtrl: NavController) {
     
