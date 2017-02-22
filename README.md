@@ -3,29 +3,9 @@
 
 ##TODO
 - Remove all placeholders, replace with actual stuff
+- Re-make the app for Android and iOS _(we murdered Cordova and have to start from scratch. Yes, it's that bad)_
 
 ##Build Instructions :wrench:
-(First time only)
-
-`npm install -g cordova ionic` (you may have to run this command as sudo)
-
-`npm install`
-
-`ionic add platform $platform_of_choice`
-
-(after the first time)
-
-`ionic build $platform_of_choice`
-
-`ionic run $platform_of_choice`
-
-(for quick debugging)
-
-`ionic serve`
-
-(this just runs the app on your computer and lets you play with it in the browser)
-
-##Issues setting up the build environment?
-If you get some error about node-sass, try this:
-
-`sudo ln -s /usr/bin/nodejs /usr/bin/node`
+- Load up the project in Android Studio
+- Build
+- Profit?
