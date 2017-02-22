@@ -1,14 +1,17 @@
 {
     "title": "Florida Polyhacks Info Dump",
-    "schedule":
-	    [
-	    {"title": "Example schedule item 1", 
-	     "time": "3:00", 
-	     "desc": "This is an example of a description", 
-	     "ext_desc":"This is an example of a much longer description that goes into a file."},   
-	    {"title": "Example schedule item 2", 
-	     "time": "4:00", 
-	     "desc": "Bee movie is best movie", 
-	     "ext_desc": "I am using the isbn api to transfer data."}    
+    "schedule": [
+	    {
+		    "title": "Example schedule item 1", 
+		    "time": "3:00", 
+		    "desc": "This is an example of a description", 
+		    "ext_desc":"This is an example of a much longer description that goes into a file."
+	    },   
+	    {
+		    "title": "Example schedule item 2", 
+		    "time": "4:00", 
+		    "desc": "Bee movie is best movie", 
+		    "ext_desc": "I am using the isbn api to transfer data."
+	    }    
     ]
 }
