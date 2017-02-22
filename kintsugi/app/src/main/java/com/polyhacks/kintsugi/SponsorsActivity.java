@@ -1,6 +1,5 @@
 package com.polyhacks.kintsugi;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,12 +10,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class SponsorsActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.sponsors);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,9 +26,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        drawer.openDrawer(GravityCompat.START, false); // start with the drawer open
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setCheckedItem(R.id.nav_map);
+        navigationView.setCheckedItem(R.id.nav_sponsors);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -69,37 +73,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        boolean shouldLaunch = false;
-        Intent myIntent;
-
         if (id == R.id.nav_map) {
             // IST Map
-            shouldLaunch = false;
-            myIntent = null; // We are here already
         } else if (id == R.id.nav_announcements) {
             // Announcements
-            shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, SponsorsActivity.class); // CHANGEME
         } else if (id == R.id.nav_schedule) {
             // Schedule
-            shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, SponsorsActivity.class); // CHANGEME
-        } else //if (id == R.id.nav_sponsors)
-        {
+        } else if (id == R.id.nav_sponsors) {
             // Sponsors
-            shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, SponsorsActivity.class); // CHANGEME
-        }
-        if (shouldLaunch) {
-            myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            MainActivity.this.startActivity(myIntent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setCheckedItem(R.id.nav_map);
         return true;
     }
 }
