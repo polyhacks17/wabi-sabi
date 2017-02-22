@@ -6,6 +6,16 @@
 - Re-make the app for Android and iOS _(we murdered Cordova and have to start from scratch. Yes, it's that bad)_
 
 ##Build Instructions :wrench:
-- Load up the project in Android Studio
+### For Android
+- Load up 'kintsugi' in Android Studio
 - Build
 - Profit?
+
+### For iOS
+- Write the iOS app
+- Add it here
+- Build
+- Profit?
+
+### For Kindle
+- See the proper documentation in 'lit'
