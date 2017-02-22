@@ -1,23 +1,17 @@
 {
-    "title": "Example",
-    "glossary": {
-        "title": "example glossary",
-		"GlossDiv": {
-            "title": "S",
-			"GlossList": {
-                "GlossEntry": {
-                    "ID": "SGML",
-					"SortAs": "SGML",
-					"GlossTerm": "Standard Generalized Markup Language",
-					"Acronym": "SGML",
-					"Abbrev": "ISO 8879:1986",
-					"GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-						"GlossSeeAlso": ["GML", "XML"]
-                    },
-					"GlossSee": "markup"
-                }
-            }
-        }
+    "title": "Florida Polyhacks Info Dump",
+    "schedule": {
+	    [
+	    {"title": "Example schedule item 1", 
+	     "time": "3:00", 
+	     "desc": "This is an example of a description", 
+	     "ext_desc":"This is an example of a much longer description that goes into a file."},
+	    
+	    {"title": "Example schedule item 2", 
+	     "time": "4:00", 
+	     "desc": "Bee movie is best movie", 
+	     "ext_desc": "I am using the isbn api to transfer data."}
+	    
+	    ]
     }
 }
