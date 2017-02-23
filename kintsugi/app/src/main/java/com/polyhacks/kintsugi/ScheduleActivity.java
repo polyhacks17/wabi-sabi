@@ -1,6 +1,6 @@
 package com.polyhacks.kintsugi;
 
-import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,15 +8,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class ScheduleActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+
+    JSONHandler serialKiller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.schedule);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,9 +31,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        drawer.openDrawer(GravityCompat.START, false); // start with the drawer open
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setCheckedItem(R.id.nav_map);
+        navigationView.setCheckedItem(R.id.nav_schedule);
         navigationView.setNavigationItemSelectedListener(this);
+
+        try {
+            serialKiller = JSONHandler.getInstance();
+        } catch (Exception e) {
+            // there is problem, plz fix
+        }
+        new UpdateSchedule().execute();
+
+        Log.d("KINTSUGI", serialKiller.getTitle());
+    }
+
+    @Override
+    public void onResume() {
+        new UpdateSchedule().execute();
     }
 
     @Override
@@ -69,37 +90,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        boolean shouldLaunch = false;
-        Intent myIntent;
-
         if (id == R.id.nav_map) {
             // IST Map
-            shouldLaunch = false;
-            myIntent = null; // We are here already
         } else if (id == R.id.nav_announcements) {
             // Announcements
-            shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, SponsorsActivity.class); // CHANGEME
         } else if (id == R.id.nav_schedule) {
             // Schedule
-            shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, ScheduleActivity.class); // CHANGEME
-        } else //if (id == R.id.nav_sponsors)
-        {
+        } else if (id == R.id.nav_sponsors) {
             // Sponsors
-            shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, SponsorsActivity.class); // CHANGEME
-        }
-        if (shouldLaunch) {
-            myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            MainActivity.this.startActivity(myIntent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setCheckedItem(R.id.nav_map);
         return true;
+    }
+
+    private class UpdateSchedule extends AsyncTask<String, Void, String>
+    {
+        @Override
+        protected String doInBackground(String[] sessID)
+        {
+            //JSONHandler serialKiller;
+            try {
+                serialKiller = JSONHandler.getInstance();
+                serialKiller.updateJSON();
+            } catch (Exception e) {
+                // do stuff with crashing thing
+                Toast.makeText(ScheduleActivity.this, "App is super pissed off rn", Toast.LENGTH_SHORT).show();
+            }
+            return null;
+        }
     }
 }
