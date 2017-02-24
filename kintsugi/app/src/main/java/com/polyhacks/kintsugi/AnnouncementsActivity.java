@@ -11,7 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class SponsorsActivity extends AppCompatActivity
+public class AnnouncementsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -30,7 +30,7 @@ public class SponsorsActivity extends AppCompatActivity
         // drawer.openDrawer(GravityCompat.START, false); // start with the drawer open
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setCheckedItem(R.id.nav_sponsors);
+        navigationView.setCheckedItem(R.id.nav_announcements);
         navigationView.setNavigationItemSelectedListener(this);
 
 
@@ -43,9 +43,9 @@ public class SponsorsActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             Intent myIntent;
-            myIntent = new Intent(SponsorsActivity.this, MainActivity.class);
+            myIntent = new Intent(AnnouncementsActivity.this, MainActivity.class);
             myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            SponsorsActivity.this.startActivity(myIntent);
+            AnnouncementsActivity.this.startActivity(myIntent);
             startActivityForResult(myIntent, 0);
             finish();
             overridePendingTransition(0,0);
@@ -86,24 +86,24 @@ public class SponsorsActivity extends AppCompatActivity
         if (id == R.id.nav_map) {
             // IST Map
             shouldLaunch = true;
-            myIntent = new Intent(SponsorsActivity.this, MainActivity.class);
+            myIntent = new Intent(AnnouncementsActivity.this, MainActivity.class);
         } else if (id == R.id.nav_announcements) {
             // Announcements
-            shouldLaunch = true;
-            myIntent = new Intent(SponsorsActivity.this, AnnouncementsActivity.class); // CHANGEME
+            shouldLaunch = false;
+            myIntent = new Intent(AnnouncementsActivity.this, AnnouncementsActivity.class);
         } else if (id == R.id.nav_schedule) {
             // Schedule
             shouldLaunch = true;
-            myIntent = new Intent(SponsorsActivity.this, ScheduleActivity.class);
+            myIntent = new Intent(AnnouncementsActivity.this, ScheduleActivity.class);
         } else //if (id == R.id.nav_sponsors)
         {
             // Sponsors
-            shouldLaunch = false;
-            myIntent = null;
+            shouldLaunch = true;
+            myIntent = new Intent(AnnouncementsActivity.this, SponsorsActivity.class);
         }
         if (shouldLaunch) {
             myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            SponsorsActivity.this.startActivity(myIntent);
+            AnnouncementsActivity.this.startActivity(myIntent);
             startActivityForResult(myIntent, 0);
             finish();
             overridePendingTransition(0,0);

@@ -10,8 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    JSONHandler serialKiller;
+    Boolean backPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +33,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setCheckedItem(R.id.nav_map);
         navigationView.setNavigationItemSelectedListener(this);
+        /*
+        try {
+            serialKiller = JSONHandler.getInstance();
+            serialKiller.updateJSON();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        */
     }
 
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (backPressedOnce == false) {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                backPressedOnce = true;
+                Toast.makeText(MainActivity.this, "Press back again to exit.", Toast.LENGTH_SHORT).show();
+                // super.onBackPressed();
+            }
         } else {
-            super.onBackPressed();
+            // exit app
+            moveTaskToBack(true);
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
         }
     }
 
@@ -79,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_announcements) {
             // Announcements
             shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, SponsorsActivity.class); // CHANGEME
+            myIntent = new Intent(MainActivity.this, AnnouncementsActivity.class); // CHANGEME
         } else if (id == R.id.nav_schedule) {
             // Schedule
             shouldLaunch = true;
@@ -93,13 +114,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (shouldLaunch) {
             myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             MainActivity.this.startActivity(myIntent);
+            startActivityForResult(myIntent, 0);
+            finish();
+            overridePendingTransition(0,0);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setCheckedItem(R.id.nav_map);
+        //NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        //navigationView.setCheckedItem(R.id.nav_map);
         return true;
     }
 }
