@@ -2,27 +2,27 @@
 	"title": "Florida Polyhacks Info Dump",
 	"schedule": [{
 		"title": "Example schedule item 1",
-		"time": "3:00",
+		"time": "03:00",
 		"desc": "This is an example of a description",
 		"ext_desc": "This is an example of a much longer description that goes into a file."
 	}, {
 		"title": "Example schedule item 2",
-		"time": "4:00",
+		"time": "04:00",
 		"desc": "Bee movie is best movie",
 		"ext_desc": "I am using the isbn api to transfer data."
 	}, {
 		"title": "Example schedule item 3",
-		"time": "Lit 'oclock",
+		"time": "05:00",
 		"desc": "Lit is the only way to register",
 		"ext_desc": "I am using the isbn api to transfer data."
 	}, {
 		"title": "Example schedule item 4",
-		"time": "0 dark thirdy",
+		"time": "23:59",
 		"desc": "Scavenger hunt begins",
 		"ext_desc": "I am using the isbn api to transfer data."
 	}, {
 		"title": "Example schedule item 5",
-		"time": "half past dark",
+		"time": "00:00",
 		"desc": "down with ionic",
 		"ext_desc": "I am using the isbn api to transfer data."
 	}, {
