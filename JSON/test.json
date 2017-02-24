@@ -10,6 +10,26 @@
 		"time": "4:00",
 		"desc": "Bee movie is best movie",
 		"ext_desc": "I am using the isbn api to transfer data."
+	}, {
+		"title": "Example schedule item 3",
+		"time": "Lit 'oclock",
+		"desc": "Lit is the only way to register",
+		"ext_desc": "I am using the isbn api to transfer data."
+	}, {
+		"title": "Example schedule item 4",
+		"time": "0 dark thirdy",
+		"desc": "Scavenger hunt begins",
+		"ext_desc": "I am using the isbn api to transfer data."
+	}, {
+		"title": "Example schedule item 5",
+		"time": "half past dark",
+		"desc": "down with ionic",
+		"ext_desc": "I am using the isbn api to transfer data."
+	}, {
+		"title": "Example schedule item 6",
+		"time": "15:49",
+		"desc": "Out of ideas",
+		"ext_desc": "I am using the isbn api to transfer data."
 	}],
 	"announcements": [{
 		"title": "Test 1",
