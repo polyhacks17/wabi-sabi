@@ -1,14 +1,34 @@
 {
 	"title": "Florida Polyhacks Info Dump",
 	"schedule": [{
-		"title": "Example schedule item 1",
-		"time": "3:00",
+		"title": "Hacking Starts",
+		"time": "03:00",
 		"desc": "This is an example of a description",
 		"ext_desc": "This is an example of a much longer description that goes into a file."
 	}, {
-		"title": "Example schedule item 2",
-		"time": "4:00",
+		"title": "Bee Movie starts",
+		"time": "04:00",
 		"desc": "Bee movie is best movie",
+		"ext_desc": "I am using the isbn api to transfer data."
+	}, {
+		"title": "Lit Sign-In ends",
+		"time": "05:00",
+		"desc": "Lit is the only way to register",
+		"ext_desc": "LIT IS BEST SIGNIN SYSTEM."
+	}, {
+		"title": "Scavenger Hunt",
+		"time": "23:59",
+		"desc": "Scavenger hunt begins",
+		"ext_desc": "Secret hint"
+	}, {
+		"title": "ionic dies",
+		"time": "00:00",
+		"desc": "down with ionic",
+		"ext_desc": "Ionic has died today"
+	}, {
+		"title": "final",
+		"time": "15:49",
+		"desc": "Out of ideas",
 		"ext_desc": "I am using the isbn api to transfer data."
 	}],
 	"announcements": [{
