@@ -48,7 +48,7 @@ void DEBUG(string firstName, string lastName, string email)
 
 int post(string nameFirst, string nameLast, string email)
 {
-    string out = "curl -s -X POST -F \"entry.490737757=" + nameFirst + "\" -F \"entry.619299017=" + 
-                 nameLast + "\" -F \"entry.858391456=" + email + "\" -F \"submit=Submit\" https://docs.google.com/forms/d/e/1FAIpQLSfUEoJdiro3aMaWmtff_9-Q6RVQyLOlcmKeJaoo7xE0MYBPrg/formResponse > /dev/null";
+    string out = "curl -s -X POST -F \"entry.114471265=" + nameFirst + "\" -F \"entry.358158617=" + 
+                 nameLast + "\" -F \"entry.1738677313=" + email + "\" -F \"submit=Submit\" https://docs.google.com/forms/d/e/1FAIpQLSf9I-k-A9PS1XjfJXSJr030nH8PbE-B5HvsTSCtJSo0F4S2Qw/formResponse > /dev/null";
     system(out.c_str());
 }
