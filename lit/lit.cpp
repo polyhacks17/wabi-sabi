@@ -6,7 +6,6 @@ using namespace std;
 // written by Greg Willard (r3pwn)
 
 void printHeader(void);
-void DEBUG(string var1, string var2, string var3);
 int post(string var1, string var2, string var3);
 
 int main(void)
@@ -20,9 +19,8 @@ int main(void)
     cout << "Enter your last name: ";
     getline(cin, lastName);
     cout << "Enter your email address: ";
-    cin >> email;
-    post(firstName, lastName, email); //TODO: fix <------
-    DEBUG(firstName, lastName, email);
+    getline(cin, email);
+    post(firstName, lastName, email);
     cout << "\nThank you for signing in, and enjoy the hackathon!\n";
     system("sleep 7");
     goto start;
@@ -39,13 +37,6 @@ void printHeader(void)
     cout << "   |_|   \\___/|_|\\__, |_|  |_|\\__,_|\\___|_|\\_\\___/ |____|\\___/ |_|/_/\n";
     cout << "                  __/ |\n";
     cout << "                 |___/\n\n";
-}
-
-void DEBUG(string firstName, string lastName, string email)
-{
-    cout << "\nDEBUG: firstName: " << firstName; 
-    cout << "\nDEBUG: lastName: " << lastName;
-    cout << "\nDEBUG: email: " << email << endl;
 }
 
 int post(string nameFirst, string nameLast, string email)
