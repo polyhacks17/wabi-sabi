@@ -15,8 +15,10 @@ int main(void)
     system("clear");
     string firstName, lastName, email;
     printHeader();
-    cout << "Enter your first and last name: ";
-    cin >> firstName >> lastName;
+    cout << "Enter your first name: ";
+    getline(cin, firstName);
+    cout << "Enter your last name: ";
+    getline(cin, lastName);
     cout << "Enter your email address: ";
     cin >> email;
     post(firstName, lastName, email); //TODO: fix <------
