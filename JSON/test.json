@@ -1,35 +1,130 @@
 {
 	"title": "Florida Polyhacks Info Dump",
 	"schedule": [{
-		"title": "Hacking Starts",
-		"time": "03:00",
+		"title": "Signup Begins",
+		"time": "03:00 PM",
 		"desc": "This is an example of a description",
 		"ext_desc": "This is an example of a much longer description that goes into a file."
 	}, {
 		"title": "Bee Movie starts",
-		"time": "04:00",
+		"time": "04:00 PM",
 		"desc": "Bee movie is best movie",
 		"ext_desc": "I am using the isbn api to transfer data."
 	}, {
 		"title": "Lit Sign-In ends",
-		"time": "05:00",
+		"time": "05:00 PM",
 		"desc": "Lit is the only way to register",
 		"ext_desc": "LIT IS BEST SIGNIN SYSTEM."
 	}, {
 		"title": "Scavenger Hunt",
-		"time": "23:59",
+		"time": "06:00 PM",
 		"desc": "Scavenger hunt begins",
 		"ext_desc": "Secret hint"
 	}, {
 		"title": "ionic dies",
-		"time": "00:00",
+		"time": "07:00 PM",
 		"desc": "down with ionic",
 		"ext_desc": "Ionic has died today"
 	}, {
 		"title": "final",
-		"time": "15:49",
+		"time": "08:00 PM",
 		"desc": "Out of ideas",
 		"ext_desc": "I am using the isbn api to transfer data."
+	}, {
+		"title": "ionic dies",
+		"time": "09:00 PM",
+		"desc": "down with ionic",
+		"ext_desc": "Ionic has died today"
+	}, {
+		"title": "ionic dies",
+		"time": "10:00 PM",
+		"desc": "down with ionic",
+		"ext_desc": "Ionic has died today"
+	}, {
+		"title": "ionic dies",
+		"time": "11:00 PM",
+		"desc": "down with ionic",
+		"ext_desc": "Ionic has died today"
+	}, {
+		"title": "ionic dies",
+		"time": "12:00 AM",
+		"desc": "down with ionic",
+		"ext_desc": "Ionic has died today"
+	}, {
+		"title": "",
+		"time": "01:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "02:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "03:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "04:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "05:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "06:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "07:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "08:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "09:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "10:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "11:00 AM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "12:00 PM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "01:00 PM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "",
+		"time": "02:00 PM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
+	}, {
+		"title": "Event End",
+		"time": "03:00 PM",
+		"desc": "Empty",
+		"ext_desc": "Empty"
 	}],
 	"announcements": [{
 		"title": "Test 1",
