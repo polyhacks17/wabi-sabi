@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.polyhacks.polyhacks17"
+        applicationId "com.polyhacks.kintsugi"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -26,6 +26,11 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:design:25.1.0'
+    compile 'com.google.firebase:firebase-core:9.2.0'
+    compile 'com.google.firebase:firebase-messaging:9.2.0'
+
     compile fileTree(dir: 'libs', include: '*.jar')
     testCompile 'junit:junit:4.12'
 }
+
+apply plugin: 'com.google.gms.google-services'

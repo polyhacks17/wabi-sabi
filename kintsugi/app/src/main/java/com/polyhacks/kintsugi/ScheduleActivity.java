@@ -1,5 +1,6 @@
 package com.polyhacks.kintsugi;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.CursorJoiner;
 import android.graphics.Color;
@@ -11,6 +12,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
@@ -93,9 +95,9 @@ public class ScheduleActivity extends AppCompatActivity
             for(int i = 0; i < schedule.size(); i++) {
                 final int itemNum = i;
                 HashMap item = (HashMap) schedule.get(i);
-                String time = (String) item.get("time");
-                String title = (String) item.get("title");
-                String desc = (String) item.get("desc");
+                final String title = (String) item.get("title");
+                final String time = (String) item.get("time");
+                final String desc = (String) item.get("desc");
                 final String ext_desc = (String) item.get("ext_desc");
 
                 // declare and define the new relativelayout in which the textviews will reside
@@ -141,8 +143,13 @@ public class ScheduleActivity extends AppCompatActivity
                 descTv.setId(generateViewId());
                 descTv.setText("             " + desc);
                 descTv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, PREFERRED_TEXT_SIZE);
-                descTv.setPadding(0, 0, 0, (int)PREFERRED_PADDING_SIZE);
+                descTv.setPadding(0, 0, 0, (int) PREFERRED_PADDING_SIZE);
+                if (desc.equals(""))
+                {
+                    descTv.setVisibility(GONE);
+                }
                 newrl.addView(descTv, descParams);
+
 
                 // horizontal line
                 View horizontalLine = new View(ScheduleActivity.this);
@@ -156,7 +163,15 @@ public class ScheduleActivity extends AppCompatActivity
                     @Override
                     public void onClick(View view) {
                         // make a dialog thingy appear
-                        Toast.makeText(ScheduleActivity.this, "DEBUG: Item " + itemNum + " was selected\next_desc: "+ ext_desc, Toast.LENGTH_SHORT).show();
+                        new AlertDialog.Builder(ScheduleActivity.this)
+                                .setTitle(title)
+                                .setMessage("This event starts at " + time + ".\n" + ext_desc)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // continue with delete
+                                    }
+                                })
+                                .show();
                     }
                 });
                 // add the new relativelayout inside the main one
@@ -208,7 +223,16 @@ public class ScheduleActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_refresh) {
+            try {
+                serialKiller.getInstance();
+                serialKiller.updateJSON();
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(getIntent());
+            } catch (Exception e) {
+                Toast.makeText(ScheduleActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+            }
             return true;
         }
 
@@ -253,31 +277,6 @@ public class ScheduleActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
-    }
-
-    private class UpdateSchedule extends AsyncTask<Void, Void, Void>
-    {
-        @Override
-        protected Void doInBackground(Void... voids) {
-            //JSONHandler serialKiller;
-            try {
-                serialKiller = JSONHandler.getInstance();
-            } catch (Exception e) {
-                // do stuff with crashing thing
-                Toast.makeText(ScheduleActivity.this, "App is super pissed off rn", Toast.LENGTH_SHORT).show();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-        
-        @Override
-        protected void onPostExecute(Void voids) {
-            Log.d("stuff", "onPostExecute was called");
-        }
     }
 
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);

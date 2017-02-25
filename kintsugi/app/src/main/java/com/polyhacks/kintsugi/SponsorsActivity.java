@@ -56,7 +56,7 @@ public class SponsorsActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.info, menu);
         return true;
     }
 
@@ -67,8 +67,9 @@ public class SponsorsActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_info) {
+            Intent myIntent = new Intent(SponsorsActivity.this, InfoActivity.class);
+            startActivity(myIntent);
             return true;
         }
 

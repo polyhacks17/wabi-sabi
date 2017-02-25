@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    JSONHandler serialKiller;
     Boolean backPressedOnce = false;
 
     @Override
@@ -33,14 +32,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setCheckedItem(R.id.nav_map);
         navigationView.setNavigationItemSelectedListener(this);
-        /*
-        try {
-            serialKiller = JSONHandler.getInstance();
-            serialKiller.updateJSON();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        */
     }
 
     @Override
@@ -65,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.info, menu);
         return true;
     }
 
@@ -76,8 +67,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_info) {
+            Intent myIntent = new Intent(MainActivity.this, InfoActivity.class);
+            startActivity(myIntent);
             return true;
         }
 
@@ -121,9 +113,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        //navigationView.setCheckedItem(R.id.nav_map);
         return true;
     }
 }
