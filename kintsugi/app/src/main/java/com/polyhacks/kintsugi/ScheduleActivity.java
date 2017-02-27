@@ -41,7 +41,6 @@ public class ScheduleActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
     JSONHandler serialKiller;
-    Boolean hasInternet = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +55,6 @@ public class ScheduleActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        // drawer.openDrawer(GravityCompat.START, false); // start with the drawer open
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setCheckedItem(R.id.nav_schedule);
         navigationView.setNavigationItemSelectedListener(this);
@@ -71,18 +68,19 @@ public class ScheduleActivity extends AppCompatActivity
         TextView tv = (TextView) findViewById(R.id.loadingtext);
         tv.setVisibility(GONE);
 
-        ArrayList scheduleItemID = new ArrayList();
-
-        int PREFERRED_TEXT_SIZE = 17; // in DiP
-        float PREFERRED_PADDING_SIZE = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
-
-        RelativeLayout rl = (RelativeLayout) findViewById(R.id.content_schedule);
-        ArrayList schedule = serialKiller.getSchedule();
         /*
             This code is special. Please don't touch. It will bite back, it is a flesh-eating demon straight from hell.
             DO NOT FEED AFTER MIDNIGHT.
          */
+        int PREFERRED_TEXT_SIZE = 17; // in DiP
+        float PREFERRED_PADDING_SIZE = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
+        Boolean hasInternet = true;
+
+        RelativeLayout rl = (RelativeLayout) findViewById(R.id.content_schedule);
+        ArrayList scheduleItemID = new ArrayList();
+        ArrayList schedule = serialKiller.getSchedule();
         Log.d("KINTSUGI", serialKiller.getTitle());
+
         if (serialKiller.getTitle().equalsIgnoreCase("It hasn't loaded the object"))
         {
             tv.setText("No internet access detected.");

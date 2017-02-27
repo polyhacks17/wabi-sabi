@@ -59,23 +59,23 @@ public class AnnouncementsActivity extends AppCompatActivity
         } catch (Exception e) {
             //there is problem, plz fix
         }
-        boolean hasInternet = true;
 
         TextView tv = (TextView) findViewById(R.id.announcementsloadingtext);
         tv.setVisibility(GONE);
 
-        ArrayList announcementItemID = new ArrayList();
-
-        int PREFERRED_TEXT_SIZE = 17; // in DiP
-        float PREFERRED_PADDING_SIZE = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
-
-        RelativeLayout rl = (RelativeLayout) findViewById(R.id.content_announcements);
-        ArrayList announcements = serialKiller.getAnnouncements();
         /*
             This code is special. Please don't touch. It will bite back, it is a flesh-eating demon straight from hell.
             DO NOT FEED AFTER MIDNIGHT.
          */
+        int PREFERRED_TEXT_SIZE = 17; // in DiP
+        float PREFERRED_PADDING_SIZE = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
+        boolean hasInternet = true;
+
+        RelativeLayout rl = (RelativeLayout) findViewById(R.id.content_announcements);
+        ArrayList announcementItemID = new ArrayList();
+        ArrayList announcements = serialKiller.getAnnouncements();
         Log.d("KINTSUGI", serialKiller.getTitle());
+
         if (serialKiller.getTitle().equalsIgnoreCase("It hasn't loaded the object"))
         {
             tv.setText("No internet access detected.");
@@ -153,7 +153,6 @@ public class AnnouncementsActivity extends AppCompatActivity
             startActivityForResult(myIntent, 0);
             finish();
             overridePendingTransition(0,0);
-            // super.onBackPressed();
         }
     }
 

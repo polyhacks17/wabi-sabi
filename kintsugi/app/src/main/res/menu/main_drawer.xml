@@ -18,4 +18,10 @@
             android:icon="@drawable/ic_sponsors"
             android:title="Sponsors" />
     </group>
+    <group android:id="@+id/thisIsToMakeTheThingWork" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_emergency"
+            android:icon="@drawable/ic_emergency"
+            android:title="Emergency Contact" />
+    </group>
 </menu>

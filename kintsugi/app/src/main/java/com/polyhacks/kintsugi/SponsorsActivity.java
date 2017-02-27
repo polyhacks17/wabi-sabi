@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 
 public class SponsorsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,13 +28,9 @@ public class SponsorsActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        // drawer.openDrawer(GravityCompat.START, false); // start with the drawer open
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setCheckedItem(R.id.nav_sponsors);
         navigationView.setNavigationItemSelectedListener(this);
-
-
     }
 
     @Override
@@ -49,7 +46,6 @@ public class SponsorsActivity extends AppCompatActivity
             startActivityForResult(myIntent, 0);
             finish();
             overridePendingTransition(0,0);
-            // super.onBackPressed();
         }
     }
 

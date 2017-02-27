@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             } else {
                 backPressedOnce = true;
                 Toast.makeText(MainActivity.this, "Press back again to exit.", Toast.LENGTH_SHORT).show();
-                // super.onBackPressed();
             }
         } else {
             // exit app
