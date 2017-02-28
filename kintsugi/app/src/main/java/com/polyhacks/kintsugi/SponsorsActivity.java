@@ -181,16 +181,21 @@ public class SponsorsActivity extends AppCompatActivity
         } else if (id == R.id.nav_announcements) {
             // Announcements
             shouldLaunch = true;
-            myIntent = new Intent(SponsorsActivity.this, AnnouncementsActivity.class); // CHANGEME
+            myIntent = new Intent(SponsorsActivity.this, AnnouncementsActivity.class);
         } else if (id == R.id.nav_schedule) {
             // Schedule
             shouldLaunch = true;
             myIntent = new Intent(SponsorsActivity.this, ScheduleActivity.class);
-        } else //if (id == R.id.nav_sponsors)
+        } else if (id == R.id.nav_sponsors)
         {
             // Sponsors
             shouldLaunch = false;
             myIntent = null;
+        } else //if (id == R.id.nav_emergency)
+        {
+            // Emergency Contact
+            shouldLaunch = true;
+            myIntent = new Intent(SponsorsActivity.this, EmergencyContactActivity.class);
         }
         if (shouldLaunch) {
             myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

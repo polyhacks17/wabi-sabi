@@ -12,14 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-    Boolean backPressedOnce = false;
+public class EmergencyContactActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.emergency);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -30,25 +28,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setCheckedItem(R.id.nav_map);
+        navigationView.setCheckedItem(R.id.nav_emergency);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (backPressedOnce == false) {
-            if (drawer.isDrawerOpen(GravityCompat.START)) {
-                drawer.closeDrawer(GravityCompat.START);
-            } else {
-                backPressedOnce = true;
-                Toast.makeText(MainActivity.this, "Press back again to exit.", Toast.LENGTH_SHORT).show();
-            }
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
         } else {
-            // exit app
-            moveTaskToBack(true);
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
+            Intent myIntent;
+            myIntent = new Intent(EmergencyContactActivity.this, MainActivity.class);
+            myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            EmergencyContactActivity.this.startActivity(myIntent);
+            startActivityForResult(myIntent, 0);
+            finish();
+            overridePendingTransition(0,0);
         }
     }
 
@@ -67,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.action_info) {
-            Intent myIntent = new Intent(MainActivity.this, InfoActivity.class);
+            Intent myIntent = new Intent(EmergencyContactActivity.this, InfoActivity.class);
             startActivity(myIntent);
             return true;
         }
@@ -86,30 +82,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_map) {
             // IST Map
-            shouldLaunch = false;
-            myIntent = null; // We are here already
+            shouldLaunch = true;
+            myIntent = new Intent(EmergencyContactActivity.this, MainActivity.class);
         } else if (id == R.id.nav_announcements) {
             // Announcements
             shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, AnnouncementsActivity.class);
+            myIntent = new Intent(EmergencyContactActivity.this, AnnouncementsActivity.class);
         } else if (id == R.id.nav_schedule) {
             // Schedule
             shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, ScheduleActivity.class);
+            myIntent = new Intent(EmergencyContactActivity.this, ScheduleActivity.class);
         } else if (id == R.id.nav_sponsors)
         {
             // Sponsors
             shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, SponsorsActivity.class);
+            myIntent = new Intent(EmergencyContactActivity.this, SponsorsActivity.class);
         } else //if (id == R.id.nav_emergency)
         {
             // Emergency Contact
-            shouldLaunch = true;
-            myIntent = new Intent(MainActivity.this, EmergencyContactActivity.class);
+            shouldLaunch = false;
+            myIntent = new Intent(EmergencyContactActivity.this, EmergencyContactActivity.class);
         }
         if (shouldLaunch) {
             myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            MainActivity.this.startActivity(myIntent);
+            EmergencyContactActivity.this.startActivity(myIntent);
             startActivityForResult(myIntent, 0);
             finish();
             overridePendingTransition(0,0);

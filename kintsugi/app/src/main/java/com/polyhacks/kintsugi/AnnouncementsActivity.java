@@ -204,11 +204,16 @@ public class AnnouncementsActivity extends AppCompatActivity
             // Schedule
             shouldLaunch = true;
             myIntent = new Intent(AnnouncementsActivity.this, ScheduleActivity.class);
-        } else //if (id == R.id.nav_sponsors)
+        } else if (id == R.id.nav_sponsors)
         {
             // Sponsors
             shouldLaunch = true;
             myIntent = new Intent(AnnouncementsActivity.this, SponsorsActivity.class);
+        } else //if (id == R.id.nav_emergency)
+        {
+            // Emergency Contact
+            shouldLaunch = true;
+            myIntent = new Intent(AnnouncementsActivity.this, EmergencyContactActivity.class);
         }
         if (shouldLaunch) {
             myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
