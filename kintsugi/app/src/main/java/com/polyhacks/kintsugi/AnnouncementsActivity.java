@@ -86,7 +86,6 @@ public class AnnouncementsActivity extends AppCompatActivity
         if (hasInternet)
         {
             for(int i = 0; i < announcements.size(); i++) {
-                final int itemNum = i;
                 HashMap item = (HashMap) announcements.get(i);
                 String title = (String) item.get("title");
                 String desc = (String) item.get("desc");

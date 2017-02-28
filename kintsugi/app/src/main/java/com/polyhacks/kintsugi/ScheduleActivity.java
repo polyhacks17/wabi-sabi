@@ -91,7 +91,6 @@ public class ScheduleActivity extends AppCompatActivity
         if (hasInternet)
         {
             for(int i = 0; i < schedule.size(); i++) {
-                final int itemNum = i;
                 HashMap item = (HashMap) schedule.get(i);
                 final String title = (String) item.get("title");
                 final String time = (String) item.get("time");
