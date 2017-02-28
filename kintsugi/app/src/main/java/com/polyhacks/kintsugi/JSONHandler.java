@@ -74,9 +74,12 @@ public class JSONHandler {
             stringJSON = stringJSON.replace("{", "");
             stringJSON = stringJSON.replace("}", "");
             stringJSON = stringJSON.replace("\":\"", "\"&\"");
+            stringJSON = stringJSON.replaceAll(", ", "%%%%");
             String[] test = stringJSON.split(",");
 
             for (int j = 0; j < test.length; j++) {
+                Log.d("KINTSUGI", "String: " + test[j]);
+                test[j] = test[j].replaceAll("%%%%", ", ");
                 String[] temp = test[j].split("&");
                 temp [0] = temp[0].replaceAll("^\"|\"$", "");
                 temp [1] = temp[1].replaceAll("^\"|\"$", "");
