@@ -20,14 +20,6 @@ public class Sponsor {
     private int logoResource;
     private int halfedLogoResource;
 
-    Sponsor(Context context, String name, String logoFileName, String site)
-    {
-        this.context = context;
-        this.name = name;
-        this.logoFileName = logoFileName;
-        this.site = site;
-    }
-
     Sponsor(Context context, String name, int drawableID, int halfedDrawableID, String site)
     {
         this.context = context;
