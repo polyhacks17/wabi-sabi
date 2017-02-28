@@ -3,7 +3,7 @@
 	"schedule": [{
 		"title": "Signup Begins",
 		"time": "03:00 PM",
-		"desc": "These are events, and you can tap on them to view more information.",
+		"desc": "These are events and you can tap on them to view more information.",
 		"ext_desc": "This is an example of a much longer description that goes into a file."
 	}, {
 		"title": "Bee Movie starts",
@@ -29,7 +29,7 @@
 		"title": "final",
 		"time": "08:00 PM",
 		"desc": "Out of ideas",
-		"ext_desc": "Something something, long description, something something."
+		"ext_desc": "Something something long description something something."
 	}, {
 		"title": "Event End",
 		"time": "03:00 PM",
