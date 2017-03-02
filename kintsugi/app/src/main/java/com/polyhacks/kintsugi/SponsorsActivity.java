@@ -58,12 +58,11 @@ public class SponsorsActivity extends AppCompatActivity
         ArrayList sponsors = new ArrayList();
         // sponsors are in the format: sponsor name, logo for big screens, logo for small screens, sponsor url
         sponsors.add(0, new Sponsor(this, "Florida Poly SGA", R.drawable.fpu_sga_upscaled, R.drawable.fpu_sga, "https://floridapolytechnic.org/get-involved/student-government-association/"));
-        sponsors.add(1, new Sponsor(this, "GitHub", R.drawable.github_logo, R.drawable.github_logo_padded, "https://github.com/"));
-        sponsors.add(2, new Sponsor(this, "MLH", R.drawable.mlh, R.drawable.mlh, "https://mlh.io/"));
-        sponsors.add(3, new Sponsor(this, "Twilio", R.drawable.twilio_logo, R.drawable.twilio_logo_padded, "https://twilio.com/"));
-        sponsors.add(4, new Sponsor(this, "Wolfram", R.drawable.wolfram_logo, R.drawable.wolfram_logo_padded, "https://wolfram.com/"));
-        // TODO: add Cole Engineering Services here
-
+        sponsors.add(1, new Sponsor(this, "MLH", R.drawable.mlh, R.drawable.mlh, "https://mlh.io/"));
+        sponsors.add(2, new Sponsor(this, "Cole Engineering Services", R.drawable.cesi, R.drawable.cesi, "http://www.coleengineering.com/"));
+        sponsors.add(3, new Sponsor(this, "GitHub", R.drawable.github_logo, R.drawable.github_logo_padded, "https://github.com/"));
+        sponsors.add(4, new Sponsor(this, "Twilio", R.drawable.twilio_logo, R.drawable.twilio_logo_padded, "https://twilio.com/"));
+        sponsors.add(5, new Sponsor(this, "Wolfram", R.drawable.wolfram_logo, R.drawable.wolfram_logo_padded, "https://wolfram.com/"));
 
         for (int index = 0; index < sponsors.size(); index++)
         {
