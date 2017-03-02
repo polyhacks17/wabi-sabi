@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,6 +49,7 @@ public class SponsorsActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         float density = getResources().getDisplayMetrics().density;
+        int densityDpi = getResources().getDisplayMetrics().densityDpi;
 
         RelativeLayout rl = (RelativeLayout) findViewById(R.id.content_sponsors);
         ArrayList sponsorItemID = new ArrayList();
