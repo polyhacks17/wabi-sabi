@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -129,6 +130,7 @@ public class SponsorsActivity extends AppCompatActivity
             sponsorNameTv.setText(spanString);
             sponsorNameTv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 30);
             sponsorNameTv.setPadding(15, 15, 15, 15);
+            sponsorNameTv.setGravity(Gravity.CENTER_HORIZONTAL);
             sponsorNameParams.addRule(RelativeLayout.BELOW, logoView.getId());
             sponsorNameParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
             newrl.addView(sponsorNameTv, sponsorNameParams);
