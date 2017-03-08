@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.CursorJoiner;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.icu.text.LocaleDisplayNames;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -109,6 +111,19 @@ public class ScheduleActivity extends AppCompatActivity
                 newrl.setId(generateViewId());
                 scheduleItemID.add(newrl.getId());
 
+                // right arrow to make things actually look clickable
+                // hooray for non-ui-oriented devs being able to sort out ui-related issues!
+                ImageView chevron = new ImageView(ScheduleActivity.this);
+                RelativeLayout.LayoutParams chevronParams = new RelativeLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                chevron.setId(generateViewId());
+                chevron.setImageResource(R.drawable.ic_right_arrow);
+                chevron.setScaleX(chevron.getScaleX() / 2);
+                chevron.setScaleY(chevron.getScaleY() / 2);
+                chevronParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+                chevronParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
+                newrl.addView(chevron, chevronParams);
+
                 // add time textview into the relativelayout
                 TextView timeTv = new TextView(ScheduleActivity.this);
                 RelativeLayout.LayoutParams timeParams = new RelativeLayout.LayoutParams(
@@ -141,6 +156,8 @@ public class ScheduleActivity extends AppCompatActivity
                 descTv.setText("             " + desc);
                 descTv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, PREFERRED_TEXT_SIZE);
                 descTv.setPadding(0, 0, 0, (int) PREFERRED_PADDING_SIZE);
+                descParams.addRule(RelativeLayout.LEFT_OF, chevron.getId());
+                descParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
                 if (desc.equals(""))
                 {
                     descTv.setVisibility(GONE);
