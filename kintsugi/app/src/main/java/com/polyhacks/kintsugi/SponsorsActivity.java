@@ -81,12 +81,7 @@ public class SponsorsActivity extends AppCompatActivity
             int logo = ((Sponsor)sponsors.get(index)).getLogoResource();
             int halfLogo = ((Sponsor)sponsors.get(index)).getHalfedLogoResource();
             final String site = ((Sponsor)sponsors.get(index)).getSite();
-            Boolean needsPadding = (density >= 2.0);
-            if (densityDpi >= 213)
-            {
-                // tablets, probably
-                needsPadding = false;
-            }
+            Boolean needsPadding = (density <= 2.0);
 
             RelativeLayout newrl = new RelativeLayout(SponsorsActivity.this);
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
