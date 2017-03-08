@@ -1,5 +1,6 @@
 package com.polyhacks.kintsugi;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -11,11 +12,11 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
-import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,15 +55,25 @@ public class SponsorsActivity extends AppCompatActivity
         RelativeLayout rl = (RelativeLayout) findViewById(R.id.content_sponsors);
         ArrayList sponsorItemID = new ArrayList();
 
+        final AlertDialog.Builder nosite = new AlertDialog.Builder(SponsorsActivity.this)
+                .setTitle("No site available")
+                .setMessage("There is no website available for this sponsor.")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                });
         // List our sponsors
         ArrayList sponsors = new ArrayList();
         // sponsors are in the format: sponsor name, logo for big screens, logo for small screens, sponsor url
         sponsors.add(0, new Sponsor(this, "Florida Poly SGA", R.drawable.fpu_sga_upscaled, R.drawable.fpu_sga, "https://floridapolytechnic.org/get-involved/student-government-association/"));
-        sponsors.add(1, new Sponsor(this, "MLH", R.drawable.mlh, R.drawable.mlh, "https://mlh.io/"));
-        sponsors.add(2, new Sponsor(this, "Cole Engineering Services", R.drawable.cesi, R.drawable.cesi, "http://www.coleengineering.com/"));
-        sponsors.add(3, new Sponsor(this, "GitHub", R.drawable.github_logo, R.drawable.github_logo_padded, "https://github.com/"));
-        sponsors.add(4, new Sponsor(this, "Twilio", R.drawable.twilio_logo, R.drawable.twilio_logo_padded, "https://twilio.com/"));
+        sponsors.add(1, new Sponsor(this, "Cole Engineering Services", R.drawable.cesi, R.drawable.cesi, "http://www.coleengineering.com/"));
+        sponsors.add(2, new Sponsor(this, "Catapult", R.drawable.catapult_logo, R.drawable.catapult_logo_padded, "http://catapultlakeland.com//"));
+        sponsors.add(3, new Sponsor(this, "Twilio", R.drawable.twilio_logo, R.drawable.twilio_logo_padded, "https://twilio.com/"));
+        sponsors.add(4, new Sponsor(this, "MLH", R.drawable.mlh, R.drawable.mlh, "https://mlh.io/"));
         sponsors.add(5, new Sponsor(this, "Wolfram", R.drawable.wolfram_logo, R.drawable.wolfram_logo_padded, "https://wolfram.com/"));
+        sponsors.add(6, new Sponsor(this, "GitHub", R.drawable.github_logo, R.drawable.github_logo_padded, "https://github.com/"));
+        sponsors.add(7, new Sponsor(this, "Scott & Kim Johnson", R.drawable.onepx, R.drawable.onepx, "nosite"));
 
         for (int index = 0; index < sponsors.size(); index++)
         {
@@ -70,15 +81,27 @@ public class SponsorsActivity extends AppCompatActivity
             int logo = ((Sponsor)sponsors.get(index)).getLogoResource();
             int halfLogo = ((Sponsor)sponsors.get(index)).getHalfedLogoResource();
             final String site = ((Sponsor)sponsors.get(index)).getSite();
+            Boolean needsPadding = (density >= 2.0);
+            if (densityDpi >= 213)
+            {
+                // tablets, probably
+                needsPadding = false;
+            }
 
             RelativeLayout newrl = new RelativeLayout(SponsorsActivity.this);
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                     ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             params.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
-            newrl.setPadding(30, 5, 30, 30);
             if (sponsorItemID.size() > 0 ) // if this is not the first item in the array
             {
                 params.addRule(RelativeLayout.BELOW, (int) sponsorItemID.get(index - 1));
+                if (!needsPadding && site != "nosite") {
+                    newrl.setPadding(30, 120, 30, 5);
+                } else {
+                    newrl.setPadding(30, 5, 30, 30);
+                }
+            } else {
+                newrl.setPadding(30, 5, 30, 30);
             }
             newrl.setId(generateViewId());
             sponsorItemID.add(newrl.getId());
@@ -89,7 +112,7 @@ public class SponsorsActivity extends AppCompatActivity
                     ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             logoView.setId(generateViewId());
             // this is a terrible hack, but it works, so plz don't complain. also, if you touch this code, I will personally hurt you.
-            if (density >= 2.0) {
+            if (needsPadding == false) {
                 logoView.setImageBitmap(decodeSampledBitmapFromResource(getResources(), logo, (int) density * 125, (int) density * 125));
             } else {
                 logoView.setImageBitmap(decodeSampledBitmapFromResource(getResources(), halfLogo, 150, 150));
@@ -115,12 +138,16 @@ public class SponsorsActivity extends AppCompatActivity
             sponsorNameParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
             newrl.addView(sponsorNameTv, sponsorNameParams);
 
-            logoView.setOnClickListener(new View.OnClickListener() {
+            newrl.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(site));
-                    startActivity(i);
+                    if (site != "nosite") {
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(site));
+                        startActivity(i);
+                    } else {
+                        nosite.show();
+                    }
                 }
             });
 
