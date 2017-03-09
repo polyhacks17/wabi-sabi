@@ -14,6 +14,7 @@
 		4450A3F91E71ECBB00CF6A9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3F81E71ECBB00CF6A9F /* Images.xcassets */; };
 		4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */; };
 		4450A4081E71ECBB00CF6A9F /* wabi_sabiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */; };
+		4450A4141E7202F400CF6A9F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4131E7202F400CF6A9F /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4450A4011E71ECBB00CF6A9F /* wabi-sabiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wabi-sabiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4450A4061E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wabi_sabiTests.swift; sourceTree = "<group>"; };
+		4450A4131E7202F400CF6A9F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */,
 				4450A3F11E71ECBB00CF6A9F /* FirstViewController.swift */,
 				4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */,
+				4450A4131E7202F400CF6A9F /* ThirdViewController.swift */,
 				4450A3F51E71ECBB00CF6A9F /* Main.storyboard */,
 				4450A3F81E71ECBB00CF6A9F /* Images.xcassets */,
 				4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				4450A3F41E71ECBB00CF6A9F /* SecondViewController.swift in Sources */,
 				4450A3F01E71ECBB00CF6A9F /* AppDelegate.swift in Sources */,
+				4450A4141E7202F400CF6A9F /* ThirdViewController.swift in Sources */,
 				4450A3F21E71ECBB00CF6A9F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				4450A40D1E71ECBB00CF6A9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4450A40E1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "wabi-sabiTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				4450A4101E71ECBB00CF6A9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
