@@ -1,2 +1,5 @@
 #PolyHacks '17 iOS App
-This directory contains the code for the iOS version of the PolyHacks '17 app (codenamed 'wabi-sabi'). Please redirect any code styling or formatting complaints to `/dev/null`.
+The iOS app for PolyHacks, codenamed 'wabi-sabi'.
+
+#Status
+Currently under development. Stay tuned for a better readme.
