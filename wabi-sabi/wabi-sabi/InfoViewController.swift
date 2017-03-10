@@ -13,9 +13,8 @@ class InfoViewController: UITableViewController, UITableViewDelegate, UITableVie
     // a list of tuples: .0 = cell name, .1 = segue to activate upon clicking the cell.
     var links = [
         ("Sponsors", "SegueToSponsors"),
-        ("Emergency Contacts", "SegueToEmergencyContacts")
+        ("Contacts", "SegueToEmergencyContacts")
     ];
-//    var links = [ String: String ]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -101,31 +101,31 @@
             </objects>
             <point key="canvasLocation" x="780" y="1292"/>
         </scene>
-        <!--Emergency Contacts-->
-        <scene sceneID="My7-zq-EoT">
+        <!--Contacts-->
+        <scene sceneID="wH6-bD-3QW">
             <objects>
-                <viewController title="Emergency Contacts" id="lzv-GZ-AJI" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uSh-G6-yNP"/>
-                        <viewControllerLayoutGuide type="bottom" id="IXq-Jv-x4o"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w5R-XL-gPD">
+                <tableViewController title="Contacts" id="3yb-CB-MuC" customClass="EmergencyContactsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wed-UA-6GA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU GONNA DIE??????" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcD-E8-vTb">
-                                <rect key="frame" x="279" y="289" width="192" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dNZ-Rt-xL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NumberCells" id="lUq-7G-5Wr">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lUq-7G-5Wr" id="dDk-tY-lOg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3yb-CB-MuC" id="A4r-h1-zCi"/>
+                            <outlet property="delegate" destination="3yb-CB-MuC" id="Pzt-K7-1NO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z43-ym-MCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="1946"/>
+            <point key="canvasLocation" x="780" y="1955"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="fhz-LC-TOl">
@@ -189,7 +189,7 @@
                     <navigationItem key="navigationItem" id="FjR-IZ-Vqs"/>
                     <connections>
                         <segue destination="7aF-f2-ld9" kind="show" identifier="SegueToSponsors" id="exl-S9-JN4"/>
-                        <segue destination="lzv-GZ-AJI" kind="show" identifier="SegueToEmergencyContacts" id="rCW-kx-onN"/>
+                        <segue destination="3yb-CB-MuC" kind="show" identifier="SegueToEmergencyContacts" id="9ho-Nv-dJX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQW-uf-kQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
