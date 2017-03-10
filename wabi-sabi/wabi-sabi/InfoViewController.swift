@@ -15,7 +15,7 @@ class InfoViewController: UITableViewController, UITableViewDelegate, UITableVie
         ("Sponsors", "SegueToSponsors"),
         ("Contacts", "SegueToEmergencyContacts"),
         ("Dev Team", "SegueToDevTeam"),
-        ("Licenses", "Licenses")
+        ("Licenses", "SegueToLicenses")
     ];
     
     override func viewDidLoad() {

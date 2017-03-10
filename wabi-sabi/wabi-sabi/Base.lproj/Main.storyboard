@@ -101,6 +101,37 @@
             </objects>
             <point key="canvasLocation" x="780" y="1292"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="h4U-jG-5dZ">
+            <objects>
+                <viewController id="kRJ-eE-hgi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MWI-3h-RY5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tl5-ep-FKS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y7e-1T-2E0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="None so far (for the iOS app, anyways)" translatesAutoresizingMaskIntoConstraints="NO" id="25y-QV-XU5">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="25y-QV-XU5" firstAttribute="leading" secondItem="Y7e-1T-2E0" secondAttribute="leadingMargin" constant="-16" id="ERJ-Lt-ohL"/>
+                            <constraint firstItem="Tl5-ep-FKS" firstAttribute="top" secondItem="25y-QV-XU5" secondAttribute="bottom" id="HXr-UR-Z3P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="25y-QV-XU5" secondAttribute="trailing" constant="-16" id="WGW-94-eWw"/>
+                            <constraint firstItem="25y-QV-XU5" firstAttribute="top" secondItem="MWI-3h-RY5" secondAttribute="bottom" id="lSX-PR-rXp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjt-B9-rCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-462" y="2311"/>
+        </scene>
         <!--Dev Team-->
         <scene sceneID="bmJ-5q-HEA">
             <objects>
@@ -231,6 +262,7 @@
                         <segue destination="7aF-f2-ld9" kind="show" identifier="SegueToSponsors" id="exl-S9-JN4"/>
                         <segue destination="3yb-CB-MuC" kind="show" identifier="SegueToEmergencyContacts" id="9ho-Nv-dJX"/>
                         <segue destination="W3c-PV-rnO" kind="show" identifier="SegueToDevTeam" id="3Zv-pV-kbU"/>
+                        <segue destination="kRJ-eE-hgi" kind="show" identifier="SegueToLicenses" id="Yr2-tL-bjG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQW-uf-kQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
