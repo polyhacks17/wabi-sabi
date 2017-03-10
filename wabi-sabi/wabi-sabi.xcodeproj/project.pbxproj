@@ -15,6 +15,8 @@
 		4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */; };
 		4450A4081E71ECBB00CF6A9F /* wabi_sabiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */; };
 		4450A4141E7202F400CF6A9F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4131E7202F400CF6A9F /* ThirdViewController.swift */; };
+		4450A4161E72071D00CF6A9F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4151E72071D00CF6A9F /* InfoViewController.swift */; };
+		4450A4481E722E7900CF6A9F /* IST_MAP.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4450A4471E722E7900CF6A9F /* IST_MAP.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		4450A4061E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wabi_sabiTests.swift; sourceTree = "<group>"; };
 		4450A4131E7202F400CF6A9F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		4450A4151E72071D00CF6A9F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4450A4471E722E7900CF6A9F /* IST_MAP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IST_MAP.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,10 @@
 				4450A3F11E71ECBB00CF6A9F /* FirstViewController.swift */,
 				4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */,
 				4450A4131E7202F400CF6A9F /* ThirdViewController.swift */,
+				4450A4151E72071D00CF6A9F /* InfoViewController.swift */,
 				4450A3F51E71ECBB00CF6A9F /* Main.storyboard */,
 				4450A3F81E71ECBB00CF6A9F /* Images.xcassets */,
+				4450A4471E722E7900CF6A9F /* IST_MAP.jpg */,
 				4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */,
 				4450A3ED1E71ECBB00CF6A9F /* Supporting Files */,
 			);
@@ -201,6 +207,7 @@
 				4450A3F71E71ECBB00CF6A9F /* Main.storyboard in Resources */,
 				4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */,
 				4450A3F91E71ECBB00CF6A9F /* Images.xcassets in Resources */,
+				4450A4481E722E7900CF6A9F /* IST_MAP.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +229,7 @@
 				4450A3F01E71ECBB00CF6A9F /* AppDelegate.swift in Sources */,
 				4450A4141E7202F400CF6A9F /* ThirdViewController.swift in Sources */,
 				4450A3F21E71ECBB00CF6A9F /* FirstViewController.swift in Sources */,
+				4450A4161E72071D00CF6A9F /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
