@@ -1,5 +1,5 @@
 //
-//  EmergencyContactsViewController.swift
+//  ContactsViewController.swift
 //  wabi-sabi
 //
 //  Created by Hutchison, Gabriel on 3/9/17.

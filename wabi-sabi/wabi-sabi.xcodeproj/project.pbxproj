@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4450A3F01E71ECBB00CF6A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */; };
-		4450A3F21E71ECBB00CF6A9F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3F11E71ECBB00CF6A9F /* FirstViewController.swift */; };
+		4450A3F21E71ECBB00CF6A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3F11E71ECBB00CF6A9F /* MapViewController.swift */; };
 		4450A3F41E71ECBB00CF6A9F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */; };
 		4450A3F71E71ECBB00CF6A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3F51E71ECBB00CF6A9F /* Main.storyboard */; };
 		4450A3F91E71ECBB00CF6A9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3F81E71ECBB00CF6A9F /* Images.xcassets */; };
@@ -43,7 +43,7 @@
 		4450A3EA1E71ECBB00CF6A9F /* wabi-sabi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wabi-sabi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4450A3EE1E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4450A3F11E71ECBB00CF6A9F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4450A3F11E71ECBB00CF6A9F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4450A3F61E71ECBB00CF6A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4450A3F81E71ECBB00CF6A9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */,
-				4450A3F11E71ECBB00CF6A9F /* FirstViewController.swift */,
+				4450A3F11E71ECBB00CF6A9F /* MapViewController.swift */,
 				4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */,
 				4450A4131E7202F400CF6A9F /* ThirdViewController.swift */,
 				4450A4151E72071D00CF6A9F /* InfoViewController.swift */,
@@ -275,7 +275,7 @@
 				4450A44A1E72332200CF6A9F /* ContactsViewController.swift in Sources */,
 				4450A3F01E71ECBB00CF6A9F /* AppDelegate.swift in Sources */,
 				4450A4141E7202F400CF6A9F /* ThirdViewController.swift in Sources */,
-				4450A3F21E71ECBB00CF6A9F /* FirstViewController.swift in Sources */,
+				4450A3F21E71ECBB00CF6A9F /* MapViewController.swift in Sources */,
 				4450A45F1E72431800CF6A9F /* SponsorsViewController.swift in Sources */,
 				4450A4161E72071D00CF6A9F /* InfoViewController.swift in Sources */,
 			);

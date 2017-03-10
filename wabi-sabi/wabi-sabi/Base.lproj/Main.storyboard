@@ -8,7 +8,7 @@
         <!--Map-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Map" id="9pv-A4-QxB" customClass="FirstViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="9pv-A4-QxB" customClass="MapViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -19,19 +19,37 @@
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IST_MAP.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YLI-Go-pRU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eo4-dl-SER" appends="YES" id="1lY-K3-gt7"/>
+                                    <outletCollection property="gestureRecognizers" destination="eo4-dl-SER" appends="YES" id="GDh-4u-oaV"/>
+                                    <outletCollection property="gestureRecognizers" destination="eo4-dl-SER" appends="YES" id="jxy-be-AkS"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="YLI-Go-pRU" secondAttribute="trailing" constant="-16" id="Dtt-6d-GvJ"/>
                             <constraint firstItem="YLI-Go-pRU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="MGm-xg-RZy"/>
                             <constraint firstItem="YLI-Go-pRU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Q3J-No-Yub"/>
                             <constraint firstItem="YLI-Go-pRU" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="edO-cA-3Cw"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eo4-dl-SER" appends="YES" id="X5C-wS-zdT"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="map" destination="YLI-Go-pRU" id="znB-nu-WVC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eo4-dl-SER">
+                    <connections>
+                        <action selector="tapMap:" destination="9pv-A4-QxB" id="DCR-Ej-pJe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
