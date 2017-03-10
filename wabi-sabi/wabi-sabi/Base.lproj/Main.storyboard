@@ -101,10 +101,50 @@
             </objects>
             <point key="canvasLocation" x="780" y="1292"/>
         </scene>
+        <!--Dev Team-->
+        <scene sceneID="bmJ-5q-HEA">
+            <objects>
+                <tableViewController title="Dev Team" id="W3c-PV-rnO" customClass="DevTeamViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Ont-Lh-XZu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DevTeamCells" textLabel="Xw4-HM-3yH" detailTextLabel="JLz-cr-3K2" style="IBUITableViewCellStyleSubtitle" id="teg-4O-pjD">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="teg-4O-pjD" id="jeX-Pt-A0M">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xw4-HM-3yH">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JLz-cr-3K2">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W3c-PV-rnO" id="GDc-NN-92e"/>
+                            <outlet property="delegate" destination="W3c-PV-rnO" id="uNq-kC-sEl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOa-lK-TiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="2311"/>
+        </scene>
         <!--Contacts-->
         <scene sceneID="wH6-bD-3QW">
             <objects>
-                <tableViewController title="Contacts" id="3yb-CB-MuC" customClass="EmergencyContactsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Contacts" id="3yb-CB-MuC" customClass="ContactsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wed-UA-6GA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,6 +230,7 @@
                     <connections>
                         <segue destination="7aF-f2-ld9" kind="show" identifier="SegueToSponsors" id="exl-S9-JN4"/>
                         <segue destination="3yb-CB-MuC" kind="show" identifier="SegueToEmergencyContacts" id="9ho-Nv-dJX"/>
+                        <segue destination="W3c-PV-rnO" kind="show" identifier="SegueToDevTeam" id="3Zv-pV-kbU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQW-uf-kQK" userLabel="First Responder" sceneMemberID="firstResponder"/>

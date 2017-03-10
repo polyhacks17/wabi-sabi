@@ -13,7 +13,9 @@ class InfoViewController: UITableViewController, UITableViewDelegate, UITableVie
     // a list of tuples: .0 = cell name, .1 = segue to activate upon clicking the cell.
     var links = [
         ("Sponsors", "SegueToSponsors"),
-        ("Contacts", "SegueToEmergencyContacts")
+        ("Contacts", "SegueToEmergencyContacts"),
+        ("Dev Team", "SegueToDevTeam"),
+        ("Licenses", "Licenses")
     ];
     
     override func viewDidLoad() {
@@ -60,8 +62,8 @@ class InfoViewController: UITableViewController, UITableViewDelegate, UITableVie
 //        self.presentViewController(alert, animated: true, completion: nil);
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "PolyHacks is blah blah blah... blah blah blah lorem ipsum goes here but I'm too lazy even for that.";
+    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "You are currently using the official PolyHacks iOS app.";
     }
     
     
