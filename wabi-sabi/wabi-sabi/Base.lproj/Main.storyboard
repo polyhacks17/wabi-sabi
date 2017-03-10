@@ -75,32 +75,6 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Sponsors-->
-        <scene sceneID="KEc-KT-8tk">
-            <objects>
-                <viewController title="Sponsors" id="7aF-f2-ld9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ykY-50-CDX"/>
-                        <viewControllerLayoutGuide type="bottom" id="0as-tC-qfm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UbO-eR-zZ9" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List o dem sponsors here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIC-hr-TPA">
-                                <rect key="frame" x="226" y="264" width="195" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gG0-y4-kjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="780" y="1292"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="h4U-jG-5dZ">
             <objects>
@@ -171,6 +145,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOa-lK-TiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="143" y="2311"/>
+        </scene>
+        <!--Sponsors-->
+        <scene sceneID="DfE-in-zy6">
+            <objects>
+                <tableViewController title="Sponsors" id="5oA-cL-x9V" customClass="SponsorsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="273" sectionHeaderHeight="22" sectionFooterHeight="22" id="f2i-L2-LrM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SponsorCells" rowHeight="273" id="E86-Ce-GgY">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E86-Ce-GgY" id="F5q-is-sy2">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sA-oX-SX6">
+                                            <rect key="frame" x="8" y="186" width="584" height="78"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HiddenUrlLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JD-j2-pQg">
+                                            <rect key="frame" x="471" y="175" width="121" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fpu_sga_upscaled.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdG-kD-prn">
+                                            <rect key="frame" x="8" y="21" width="584" height="157"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="157" id="Yid-go-0LM"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vdG-kD-prn" firstAttribute="leading" secondItem="F5q-is-sy2" secondAttribute="leadingMargin" id="1W6-6h-n8r"/>
+                                        <constraint firstItem="4sA-oX-SX6" firstAttribute="leading" secondItem="F5q-is-sy2" secondAttribute="leadingMargin" id="JUo-mw-WFp"/>
+                                        <constraint firstItem="vdG-kD-prn" firstAttribute="trailing" secondItem="F5q-is-sy2" secondAttribute="trailingMargin" id="QJP-ye-SkG"/>
+                                        <constraint firstItem="4sA-oX-SX6" firstAttribute="top" secondItem="vdG-kD-prn" secondAttribute="bottom" constant="8" id="RUP-fA-Auq"/>
+                                        <constraint firstItem="vdG-kD-prn" firstAttribute="top" secondItem="F5q-is-sy2" secondAttribute="topMargin" constant="13" id="buH-dR-SKE"/>
+                                        <constraint firstItem="4sA-oX-SX6" firstAttribute="bottom" secondItem="F5q-is-sy2" secondAttribute="bottomMargin" id="xMF-Me-5TD"/>
+                                        <constraint firstItem="4sA-oX-SX6" firstAttribute="trailing" secondItem="F5q-is-sy2" secondAttribute="trailingMargin" id="xNg-Tt-lhC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5oA-cL-x9V" id="oDx-fG-Jlf"/>
+                            <outlet property="delegate" destination="5oA-cL-x9V" id="12K-4I-9bQ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUc-7Q-vPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="1288"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="wH6-bD-3QW">
@@ -259,10 +288,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="FjR-IZ-Vqs"/>
                     <connections>
-                        <segue destination="7aF-f2-ld9" kind="show" identifier="SegueToSponsors" id="exl-S9-JN4"/>
                         <segue destination="3yb-CB-MuC" kind="show" identifier="SegueToEmergencyContacts" id="9ho-Nv-dJX"/>
                         <segue destination="W3c-PV-rnO" kind="show" identifier="SegueToDevTeam" id="3Zv-pV-kbU"/>
                         <segue destination="kRJ-eE-hgi" kind="show" identifier="SegueToLicenses" id="Yr2-tL-bjG"/>
+                        <segue destination="5oA-cL-x9V" kind="show" identifier="SegueToSponsors" id="8v1-u7-kYB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQW-uf-kQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -313,6 +342,7 @@
     <resources>
         <image name="IST_MAP.jpg" width="1920" height="1080"/>
         <image name="first" width="30" height="30"/>
+        <image name="fpu_sga_upscaled.png" width="1500" height="1500"/>
         <image name="second" width="30" height="30"/>
         <image name="third" width="30" height="30"/>
     </resources>

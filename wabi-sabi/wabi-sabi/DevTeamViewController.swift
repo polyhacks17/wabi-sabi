@@ -57,6 +57,7 @@ class DevTeamViewController: UITableViewController {
         if (UIApplication.sharedApplication().canOpenURL(url)) {
             UIApplication.sharedApplication().openURL(url)
         }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
