@@ -15,7 +15,7 @@ class InfoViewController: UITableViewController, UITableViewDelegate, UITableVie
         ("Sponsors", "SegueToSponsors"),
         ("Contacts", "SegueToEmergencyContacts"),
         ("Dev Team", "SegueToDevTeam"),
-        ("Licenses", "SegueToLicenses")
+//        ("Licenses", "SegueToLicenses")
     ];
     
     override func viewDidLoad() {
@@ -62,9 +62,9 @@ class InfoViewController: UITableViewController, UITableViewDelegate, UITableVie
 //        self.presentViewController(alert, animated: true, completion: nil);
     }
     
-    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "You are currently using the official PolyHacks iOS app.";
-    }
+//    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//        return "You are currently using the official PolyHacks iOS app.";
+//    }
     
     
 }

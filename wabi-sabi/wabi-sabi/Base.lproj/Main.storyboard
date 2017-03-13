@@ -39,7 +39,7 @@
                             <outletCollection property="gestureRecognizers" destination="eo4-dl-SER" appends="YES" id="X5C-wS-zdT"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="icon_map" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="map" destination="YLI-Go-pRU" id="znB-nu-WVC"/>
                     </connections>
@@ -87,11 +87,11 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Announcements" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="icon_announcements" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="750" y="338"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h4U-jG-5dZ">
@@ -277,7 +277,7 @@
                             <constraint firstItem="WaV-VG-7E5" firstAttribute="top" secondItem="IAv-KG-6Bd" secondAttribute="bottom" constant="8" symbolic="YES" id="Qiv-77-Ggd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="third" id="Jes-OO-7OO"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="icon_schedule" id="Jes-OO-7OO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FST-3U-Ylx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -328,8 +328,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="Wre-nM-o4C" kind="relationship" relationship="viewControllers" id="JI6-rW-UTE"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="WP0-FV-WQG" kind="relationship" relationship="viewControllers" id="9oZ-3C-hNp"/>
                     </connections>
                 </tabBarController>
@@ -337,11 +337,11 @@
             </objects>
             <point key="canvasLocation" x="-156" y="469"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="8zy-dw-g3a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WP0-FV-WQG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oyZ-8D-1YT"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="oyZ-8D-1YT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OIj-cy-FaT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -359,9 +359,9 @@
     </scenes>
     <resources>
         <image name="IST_MAP.jpg" width="1920" height="1080"/>
-        <image name="first" width="30" height="30"/>
         <image name="fpu_sga_upscaled.png" width="1500" height="1500"/>
-        <image name="second" width="30" height="30"/>
-        <image name="third" width="30" height="30"/>
+        <image name="icon_announcements" width="75" height="75"/>
+        <image name="icon_map" width="75" height="75"/>
+        <image name="icon_schedule" width="75" height="75"/>
     </resources>
 </document>

@@ -27,6 +27,7 @@
 		4450A45A1E72426500CF6A9F /* twilio_logo_padded.png in Resources */ = {isa = PBXBuildFile; fileRef = 4450A4531E72426500CF6A9F /* twilio_logo_padded.png */; };
 		4450A45B1E72426500CF6A9F /* wolfram_logo_padded.png in Resources */ = {isa = PBXBuildFile; fileRef = 4450A4541E72426500CF6A9F /* wolfram_logo_padded.png */; };
 		4450A45F1E72431800CF6A9F /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A45E1E72431800CF6A9F /* SponsorsViewController.swift */; };
+		445C89831E77499D00A52787 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445C89821E77499D00A52787 /* Icons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		4450A4531E72426500CF6A9F /* twilio_logo_padded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twilio_logo_padded.png; sourceTree = "<group>"; };
 		4450A4541E72426500CF6A9F /* wolfram_logo_padded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wolfram_logo_padded.png; sourceTree = "<group>"; };
 		4450A45E1E72431800CF6A9F /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		445C89821E77499D00A52787 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				4450A45E1E72431800CF6A9F /* SponsorsViewController.swift */,
 				4450A3F51E71ECBB00CF6A9F /* Main.storyboard */,
 				4450A3F81E71ECBB00CF6A9F /* Images.xcassets */,
+				445C89821E77499D00A52787 /* Icons.xcassets */,
 				4450A4471E722E7900CF6A9F /* IST_MAP.jpg */,
 				4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */,
 				4450A44D1E72426500CF6A9F /* SponsorImages */,
@@ -252,6 +255,7 @@
 				4450A45B1E72426500CF6A9F /* wolfram_logo_padded.png in Resources */,
 				4450A4591E72426500CF6A9F /* mlh.png in Resources */,
 				4450A4481E722E7900CF6A9F /* IST_MAP.jpg in Resources */,
+				445C89831E77499D00A52787 /* Icons.xcassets in Resources */,
 				4450A4561E72426500CF6A9F /* cesi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

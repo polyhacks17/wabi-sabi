@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactsViewController: UITableViewController {
+class ContactsViewController: UITableViewController, UIAlertViewDelegate {
 
     // a list of tuples: .0 = cell name, .1 = segue to activate upon clicking the cell.
     var numbers = [
@@ -49,11 +49,20 @@ class ContactsViewController: UITableViewController {
         if (number == nil) {
             return;
         }
-        // call the number
-        let url = NSURL(string: "tel://\(number)")!
-        if (UIApplication.sharedApplication().canOpenURL(url)) {
-            UIApplication.sharedApplication().openURL(url)
+        // confirm that the user wants to call the number
+        let alert = UIAlertController(title: "Call Number", message: "Call \(number!)?", preferredStyle: UIAlertControllerStyle.Alert);
+        let callAction = UIAlertAction(title: "Call", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            // call the number
+            let url = NSURL(string: "telprompt://\(number!)")!
+            if (UIApplication.sharedApplication().canOpenURL(url)) {
+                UIApplication.sharedApplication().openURL(url)
+            }
         }
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil));
+        alert.addAction(callAction);
+        self.presentViewController(alert, animated: true, completion: nil);
+        
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
