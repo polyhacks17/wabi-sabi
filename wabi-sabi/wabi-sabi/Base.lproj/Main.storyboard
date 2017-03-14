@@ -57,12 +57,12 @@
         <scene sceneID="N5a-Nf-cwQ">
             <objects>
                 <tableViewController title="Announcements" id="2iU-Ki-STY" customClass="AnnouncementsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="99" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Cr-LD-Eyq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Cr-LD-Eyq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementsCell" rowHeight="99" id="N3r-nL-C8q">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementsCell" rowHeight="100" id="N3r-nL-C8q">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N3r-nL-C8q" id="Bqb-OC-b1M">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -265,44 +265,6 @@
             </objects>
             <point key="canvasLocation" x="780" y="1955"/>
         </scene>
-        <!--Schedule-->
-        <scene sceneID="fhz-LC-TOl">
-            <objects>
-                <viewController title="Schedule" id="Wre-nM-o4C" customClass="ThirdViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DZx-7c-yVM"/>
-                        <viewControllerLayoutGuide type="bottom" id="c5g-pE-vQf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5WX-bs-SJ3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loaded by ThirdViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-VG-7E5">
-                                <rect key="frame" x="192" y="292" width="199" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IAv-KG-6Bd">
-                                <rect key="frame" x="192" y="234" width="170" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WaV-VG-7E5" firstAttribute="centerX" secondItem="IAv-KG-6Bd" secondAttribute="centerX" id="Nvg-1x-Jc3"/>
-                            <constraint firstItem="WaV-VG-7E5" firstAttribute="top" secondItem="IAv-KG-6Bd" secondAttribute="bottom" constant="8" symbolic="YES" id="Qiv-77-Ggd"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Schedule" id="6uw-Kf-POT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FST-3U-Ylx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2374" y="1044"/>
-        </scene>
         <!--Info-->
         <scene sceneID="Ddw-2H-4qL">
             <objects>
@@ -349,7 +311,7 @@
                     <connections>
                         <segue destination="ftb-Ub-0wo" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="JaW-oh-14K" kind="relationship" relationship="viewControllers" id="3Jx-gQ-taZ"/>
-                        <segue destination="wvI-Zp-mEX" kind="relationship" relationship="viewControllers" id="JI6-rW-UTE"/>
+                        <segue destination="96L-IN-T9X" kind="relationship" relationship="viewControllers" id="f4h-90-bqu"/>
                         <segue destination="WP0-FV-WQG" kind="relationship" relationship="viewControllers" id="9oZ-3C-hNp"/>
                     </connections>
                 </tabBarController>
@@ -415,23 +377,83 @@
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
         <!--Schedule-->
-        <scene sceneID="Dma-pz-rCz">
+        <scene sceneID="eUG-ZS-0n2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wvI-Zp-mEX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" image="icon_schedule" id="Jes-OO-7OO"/>
+                <tableViewController title="Schedule" id="VJa-94-K5F" customClass="ScheduleViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="xJx-5r-2AD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduleCell" rowHeight="100" id="XDT-bM-RH5">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XDT-bM-RH5" id="XBM-ED-CZ5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1G-hc-Tx7">
+                                            <rect key="frame" x="16" y="14" width="496" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-Ff-CQA" customClass="UIVerticalAlignLabel" customModule="wabi_sabi" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="46" width="568" height="45"/>
+                                            <string key="text">Labeln thatja ;aegiajeg;iegj ;aeligjaeg ;ilaej g;laiegj a;glij aeg;lije g;liejg;aeglija;glijag;laijga;lgija g;liaj gi;laejg aeig jaeligj eagijgjgiojegio gioejg geoijgoi gjg eioejgiogejoeig eogij egoij egoijegioegj ogiej jgoei egio egoijeg eg</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-cU-dqp">
+                                            <rect key="frame" x="520" y="13" width="72" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="9n6-P2-YuS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bhT-Ff-CQA" firstAttribute="leading" secondItem="XBM-ED-CZ5" secondAttribute="leadingMargin" constant="8" id="EAN-uY-R5b"/>
+                                        <constraint firstItem="VdQ-cU-dqp" firstAttribute="trailing" secondItem="XBM-ED-CZ5" secondAttribute="trailingMargin" id="OYG-WW-jxm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bhT-Ff-CQA" secondAttribute="trailing" constant="8" id="avN-lr-ZSB"/>
+                                        <constraint firstItem="VdQ-cU-dqp" firstAttribute="leading" secondItem="z1G-hc-Tx7" secondAttribute="trailing" constant="8" id="z97-nx-btT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VJa-94-K5F" id="GCg-RO-Jax"/>
+                            <outlet property="delegate" destination="VJa-94-K5F" id="8S9-gi-L43"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Schedule" id="abH-yU-Tin"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="rGm-DT-v2C">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfU-WQ-IIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266" y="1108"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="C6e-B0-6Uc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="96L-IN-T9X" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="icon_schedule" id="Qty-17-mF2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="627-w8-SNI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="937-IA-JOL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Wre-nM-o4C" kind="relationship" relationship="rootViewController" id="YSm-h6-jH7"/>
+                        <segue destination="VJa-94-K5F" kind="relationship" relationship="rootViewController" id="deH-RB-wju"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B5c-tX-l3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Wb-Ck-89I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="1044"/>
+            <point key="canvasLocation" x="1454" y="1121"/>
         </scene>
     </scenes>
     <resources>
