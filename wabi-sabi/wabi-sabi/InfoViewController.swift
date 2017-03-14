@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class InfoViewController: UITableViewController {
     
     // a list of tuples: .0 = cell name, .1 = segue to activate upon clicking the cell.
     var links = [

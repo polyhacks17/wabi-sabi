@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441AFC781E777C1B003290E2 /* UIVerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */; };
 		4450A3F01E71ECBB00CF6A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */; };
 		4450A3F21E71ECBB00CF6A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3F11E71ECBB00CF6A9F /* MapViewController.swift */; };
-		4450A3F41E71ECBB00CF6A9F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */; };
+		4450A3F41E71ECBB00CF6A9F /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A3F31E71ECBB00CF6A9F /* AnnouncementsViewController.swift */; };
 		4450A3F71E71ECBB00CF6A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3F51E71ECBB00CF6A9F /* Main.storyboard */; };
 		4450A3F91E71ECBB00CF6A9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3F81E71ECBB00CF6A9F /* Images.xcassets */; };
 		4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */; };
@@ -41,11 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVerticalAlignLabel.swift; sourceTree = "<group>"; };
 		4450A3EA1E71ECBB00CF6A9F /* wabi-sabi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wabi-sabi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4450A3EE1E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4450A3F11E71ECBB00CF6A9F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4450A3F31E71ECBB00CF6A9F /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		4450A3F61E71ECBB00CF6A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4450A3F81E71ECBB00CF6A9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4450A3FB1E71ECBB00CF6A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		4450A4541E72426500CF6A9F /* wolfram_logo_padded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wolfram_logo_padded.png; sourceTree = "<group>"; };
 		4450A45E1E72431800CF6A9F /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		445C89821E77499D00A52787 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		445C89841E7775E400A52787 /* wabi-sabi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wabi-sabi-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +112,8 @@
 			children = (
 				4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */,
 				4450A3F11E71ECBB00CF6A9F /* MapViewController.swift */,
-				4450A3F31E71ECBB00CF6A9F /* SecondViewController.swift */,
+				4450A3F31E71ECBB00CF6A9F /* AnnouncementsViewController.swift */,
+				441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */,
 				4450A4131E7202F400CF6A9F /* ThirdViewController.swift */,
 				4450A4151E72071D00CF6A9F /* InfoViewController.swift */,
 				4450A4491E72332200CF6A9F /* ContactsViewController.swift */,
@@ -122,6 +126,7 @@
 				4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */,
 				4450A44D1E72426500CF6A9F /* SponsorImages */,
 				4450A3ED1E71ECBB00CF6A9F /* Supporting Files */,
+				445C89841E7775E400A52787 /* wabi-sabi-Bridging-Header.h */,
 			);
 			path = "wabi-sabi";
 			sourceTree = "<group>";
@@ -274,7 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4450A3F41E71ECBB00CF6A9F /* SecondViewController.swift in Sources */,
+				441AFC781E777C1B003290E2 /* UIVerticalAlignLabel.swift in Sources */,
+				4450A3F41E71ECBB00CF6A9F /* AnnouncementsViewController.swift in Sources */,
 				4450A44C1E7239B200CF6A9F /* DevTeamViewController.swift in Sources */,
 				4450A44A1E72332200CF6A9F /* ContactsViewController.swift in Sources */,
 				4450A3F01E71ECBB00CF6A9F /* AppDelegate.swift in Sources */,
@@ -406,9 +412,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "wabi-sabi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "wabi-sabi/wabi-sabi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -416,9 +425,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "wabi-sabi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "wabi-sabi/wabi-sabi-Bridging-Header.h";
 			};
 			name = Release;
 		};
