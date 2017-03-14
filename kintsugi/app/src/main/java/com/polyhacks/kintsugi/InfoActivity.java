@@ -99,7 +99,6 @@ public class InfoActivity extends AppCompatActivity {
         calebGHText.setTextColor(Color.BLUE);
         calebGHTextParams.addRule(RelativeLayout.BELOW, calebText.getId());
         calebGHText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
-        calebGHText.setPadding(0, 0, 0, 20);
         rl.addView(calebGHText, calebGHTextParams);
         calebGHText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,10 +109,39 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
 
+        TextView gabeText = new TextView(InfoActivity.this);
+        RelativeLayout.LayoutParams gabeTextParams = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        gabeText.setId(generateViewId());
+        gabeText.setText("Gabriel Hutchison (PrivacyPolicy)");
+        gabeTextParams.addRule(RelativeLayout.BELOW, calebGHText.getId());
+        gabeText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
+        gabeText.setPadding(0, 10, 0, 0);
+        rl.addView(gabeText, gabeTextParams);
+
+        TextView gabeGHText = new TextView(InfoActivity.this);
+        RelativeLayout.LayoutParams gabeGHTextParams = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        gabeGHText.setId(generateViewId());
+        gabeGHText.setText(" - Github");
+        gabeGHText.setTextColor(Color.BLUE);
+        gabeGHTextParams.addRule(RelativeLayout.BELOW, gabeText.getId());
+        gabeGHText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
+        gabeGHText.setPadding(0, 0, 0, 20);
+        rl.addView(gabeGHText, gabeGHTextParams);
+        gabeGHText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("https://github.com/PrivacyPolicy/"));
+                startActivity(i);
+            }
+        });
+
         View horizontalLine = new View(InfoActivity.this);
         RelativeLayout.LayoutParams horizLineParams = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, 1);
-        horizLineParams.addRule(RelativeLayout.BELOW, calebGHText.getId());
+        horizLineParams.addRule(RelativeLayout.BELOW, gabeGHText.getId());
         horizontalLine.setId(generateViewId());
         horizontalLine.setBackgroundColor(Color.GRAY);
         rl.addView(horizontalLine, horizLineParams);
