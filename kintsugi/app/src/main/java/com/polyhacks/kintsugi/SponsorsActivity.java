@@ -74,7 +74,7 @@ public class SponsorsActivity extends AppCompatActivity
         sponsors.add(4, new Sponsor(this, "MLH", R.drawable.mlh, R.drawable.mlh, "https://mlh.io/"));
         sponsors.add(5, new Sponsor(this, "Wolfram", R.drawable.wolfram_logo, R.drawable.wolfram_logo_padded, "https://wolfram.com/"));
         sponsors.add(6, new Sponsor(this, "GitHub", R.drawable.github_logo, R.drawable.github_logo_padded, "https://github.com/"));
-        sponsors.add(7, new Sponsor(this, "Scott & Kim Johnson", R.drawable.onepx, R.drawable.onepx, "nosite"));
+        sponsors.add(7, new Sponsor(this, "Scott and Kim Johnson", R.drawable.skjohnson, R.drawable.skjohnson_padded, "nosite"));
 
         for (int index = 0; index < sponsors.size(); index++)
         {
