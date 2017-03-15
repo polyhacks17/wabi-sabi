@@ -391,23 +391,27 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1G-hc-Tx7">
-                                            <rect key="frame" x="16" y="14" width="496" height="20"/>
+                                            <rect key="frame" x="16" y="9" width="496" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="IA6-fA-UbT"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-Ff-CQA" customClass="UIVerticalAlignLabel" customModule="PolyHacks" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="46" width="568" height="45"/>
-                                            <string key="text">Labeln thatja ;aegiajeg;iegj ;aeligjaeg ;ilaej g;laiegj a;glij aeg;lije g;liejg;aeglija;glijag;laijga;lgija g;liaj gi;laejg aeig jaeligj eagijgjgiojegio gioejg geoijgoi gjg eioejgiogejoeig eogij egoij egoijegioegj ogiej jgoei egio egoijeg eg</string>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-cU-dqp">
+                                            <rect key="frame" x="520" y="9" width="72" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="1FP-Wn-Qtr"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="9n6-P2-YuS"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-cU-dqp">
-                                            <rect key="frame" x="520" y="13" width="72" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="9n6-P2-YuS"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-Ff-CQA" customClass="UIVerticalAlignLabel" customModule="PolyHacks" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="38" width="568" height="55"/>
+                                            <string key="text">Labeln thatja ;aegiajeg;iegj ;aeligjaeg ;ilaej g;laiegj a;glij aeg;lije g;liejg;aeglija;glijag;laijga;lgija g;liaj gi;laejg aeig jaeligj eagijgjgiojegio gioejg geoijgoi gjg eioejgiogejoeig eogij egoij egoijegioegj ogiej jgoei egio egoijeg eg</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -415,8 +419,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="bhT-Ff-CQA" firstAttribute="leading" secondItem="XBM-ED-CZ5" secondAttribute="leadingMargin" constant="8" id="EAN-uY-R5b"/>
+                                        <constraint firstItem="VdQ-cU-dqp" firstAttribute="top" secondItem="XBM-ED-CZ5" secondAttribute="topMargin" id="EeB-hk-oYZ"/>
+                                        <constraint firstItem="z1G-hc-Tx7" firstAttribute="leading" secondItem="XBM-ED-CZ5" secondAttribute="leadingMargin" constant="8" id="HEw-zJ-siz"/>
+                                        <constraint firstItem="bhT-Ff-CQA" firstAttribute="bottom" secondItem="XBM-ED-CZ5" secondAttribute="bottomMargin" id="MJN-lV-oU6"/>
                                         <constraint firstItem="VdQ-cU-dqp" firstAttribute="trailing" secondItem="XBM-ED-CZ5" secondAttribute="trailingMargin" id="OYG-WW-jxm"/>
+                                        <constraint firstItem="z1G-hc-Tx7" firstAttribute="top" secondItem="XBM-ED-CZ5" secondAttribute="topMargin" id="ZwW-XZ-Drq"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="bhT-Ff-CQA" secondAttribute="trailing" constant="8" id="avN-lr-ZSB"/>
+                                        <constraint firstItem="bhT-Ff-CQA" firstAttribute="top" secondItem="VdQ-cU-dqp" secondAttribute="bottom" constant="8" id="uky-Bv-W7D"/>
                                         <constraint firstItem="VdQ-cU-dqp" firstAttribute="leading" secondItem="z1G-hc-Tx7" secondAttribute="trailing" constant="8" id="z97-nx-btT"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -437,7 +446,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfU-WQ-IIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266" y="1108"/>
+            <point key="canvasLocation" x="2266" y="1105"/>
         </scene>
         <!--Schedule Info-->
         <scene sceneID="zGB-Oc-sCt">
@@ -452,7 +461,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy3-OJ-vU3">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -462,8 +471,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uy3-OJ-vU3" firstAttribute="leading" secondItem="H6D-0N-x4a" secondAttribute="leadingMargin" constant="-16" id="7fs-13-nYN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uy3-OJ-vU3" secondAttribute="trailing" constant="-16" id="Z1E-dP-pq8"/>
+                            <constraint firstItem="uy3-OJ-vU3" firstAttribute="leading" secondItem="H6D-0N-x4a" secondAttribute="leadingMargin" id="7fs-13-nYN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uy3-OJ-vU3" secondAttribute="trailing" id="Z1E-dP-pq8"/>
                             <constraint firstItem="uy3-OJ-vU3" firstAttribute="top" secondItem="H6D-0N-x4a" secondAttribute="topMargin" id="htq-Zq-rav"/>
                             <constraint firstItem="uy3-OJ-vU3" firstAttribute="bottom" secondItem="H6D-0N-x4a" secondAttribute="bottomMargin" id="nod-YR-7e4"/>
                         </constraints>

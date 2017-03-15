@@ -66,4 +66,8 @@ class ScheduleViewController: DownloadListViewController {
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
+    
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.None)
+    }
 }
