@@ -10,6 +10,8 @@ import UIKit
 
 class ScheduleViewController: DownloadListViewController {
     
+    let debugging = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,11 +22,15 @@ class ScheduleViewController: DownloadListViewController {
     }
     
     override func cacheFileName() -> String {
-        return "cache_announcements.json"
+        return "cache_data.json"
     }
     
     override func dataURL() -> String {
-        return "https://raw.githubusercontent.com/r3pwn/PolyHacks2017/master/JSON/prod.json"
+        if debugging {
+            return "https://www.polyhacks.com/eventData/test.json"
+        } else {
+            return "https://www.polyhacks.com/eventData/data.json"
+        }
     }
     
     override func dataKey() -> String {

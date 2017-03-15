@@ -47,7 +47,7 @@
 		441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVerticalAlignLabel.swift; sourceTree = "<group>"; };
 		441AFC7B1E778252003290E2 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		441AFC7D1E778478003290E2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		4450A3EA1E71ECBB00CF6A9F /* wabi-sabi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wabi-sabi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4450A3EA1E71ECBB00CF6A9F /* PolyHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4450A3EE1E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A3EF1E71ECBB00CF6A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4450A3F11E71ECBB00CF6A9F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		4450A3F61E71ECBB00CF6A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4450A3F81E71ECBB00CF6A9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4450A3FB1E71ECBB00CF6A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4450A4011E71ECBB00CF6A9F /* wabi-sabiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wabi-sabiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4450A4011E71ECBB00CF6A9F /* PolyHacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyHacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4450A4061E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wabi_sabiTests.swift; sourceTree = "<group>"; };
 		4450A4131E7202F400CF6A9F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		4450A3EB1E71ECBB00CF6A9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4450A3EA1E71ECBB00CF6A9F /* wabi-sabi.app */,
-				4450A4011E71ECBB00CF6A9F /* wabi-sabiTests.xctest */,
+				4450A3EA1E71ECBB00CF6A9F /* PolyHacks.app */,
+				4450A4011E71ECBB00CF6A9F /* PolyHacksTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4450A3E91E71ECBB00CF6A9F /* wabi-sabi */ = {
+		4450A3E91E71ECBB00CF6A9F /* PolyHacks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4450A40B1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "wabi-sabi" */;
+			buildConfigurationList = 4450A40B1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "PolyHacks" */;
 			buildPhases = (
 				4450A3E61E71ECBB00CF6A9F /* Sources */,
 				4450A3E71E71ECBB00CF6A9F /* Frameworks */,
@@ -191,14 +191,14 @@
 			);
 			dependencies = (
 			);
-			name = "wabi-sabi";
+			name = PolyHacks;
 			productName = "wabi-sabi";
-			productReference = 4450A3EA1E71ECBB00CF6A9F /* wabi-sabi.app */;
+			productReference = 4450A3EA1E71ECBB00CF6A9F /* PolyHacks.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4450A4001E71ECBB00CF6A9F /* wabi-sabiTests */ = {
+		4450A4001E71ECBB00CF6A9F /* PolyHacksTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4450A40E1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "wabi-sabiTests" */;
+			buildConfigurationList = 4450A40E1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "PolyHacksTests" */;
 			buildPhases = (
 				4450A3FD1E71ECBB00CF6A9F /* Sources */,
 				4450A3FE1E71ECBB00CF6A9F /* Frameworks */,
@@ -209,9 +209,9 @@
 			dependencies = (
 				4450A4031E71ECBB00CF6A9F /* PBXTargetDependency */,
 			);
-			name = "wabi-sabiTests";
+			name = PolyHacksTests;
 			productName = "wabi-sabiTests";
-			productReference = 4450A4011E71ECBB00CF6A9F /* wabi-sabiTests.xctest */;
+			productReference = 4450A4011E71ECBB00CF6A9F /* PolyHacksTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "wabi-sabi" */;
+			buildConfigurationList = 4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "PolyHacks" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -245,8 +245,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4450A3E91E71ECBB00CF6A9F /* wabi-sabi */,
-				4450A4001E71ECBB00CF6A9F /* wabi-sabiTests */,
+				4450A3E91E71ECBB00CF6A9F /* PolyHacks */,
+				4450A4001E71ECBB00CF6A9F /* PolyHacksTests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,7 +312,7 @@
 /* Begin PBXTargetDependency section */
 		4450A4031E71ECBB00CF6A9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4450A3E91E71ECBB00CF6A9F /* wabi-sabi */;
+			target = 4450A3E91E71ECBB00CF6A9F /* PolyHacks */;
 			targetProxy = 4450A4021E71ECBB00CF6A9F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -423,7 +423,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "wabi-sabi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PolyHacks;
 				SWIFT_OBJC_BRIDGING_HEADER = "wabi-sabi/wabi-sabi-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -436,7 +436,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "wabi-sabi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PolyHacks;
 				SWIFT_OBJC_BRIDGING_HEADER = "wabi-sabi/wabi-sabi-Bridging-Header.h";
 			};
 			name = Release;
@@ -455,7 +455,7 @@
 				);
 				INFOPLIST_FILE = "wabi-sabiTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PolyHacksTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wabi-sabi.app/wabi-sabi";
 			};
 			name = Debug;
@@ -470,7 +470,7 @@
 				);
 				INFOPLIST_FILE = "wabi-sabiTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PolyHacksTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wabi-sabi.app/wabi-sabi";
 			};
 			name = Release;
@@ -478,7 +478,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "wabi-sabi" */ = {
+		4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "PolyHacks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4450A4091E71ECBB00CF6A9F /* Debug */,
@@ -487,7 +487,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4450A40B1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "wabi-sabi" */ = {
+		4450A40B1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "PolyHacks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4450A40C1E71ECBB00CF6A9F /* Debug */,
@@ -496,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4450A40E1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "wabi-sabiTests" */ = {
+		4450A40E1E71ECBB00CF6A9F /* Build configuration list for PBXNativeTarget "PolyHacksTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4450A40F1E71ECBB00CF6A9F /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4450A3E91E71ECBB00CF6A9F"
-               BuildableName = "wabi-sabi.app"
-               BlueprintName = "wabi-sabi"
-               ReferencedContainer = "container:wabi-sabi.xcodeproj">
+               BuildableName = "PolyHacks.app"
+               BlueprintName = "PolyHacks"
+               ReferencedContainer = "container:PolyHacks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4450A4001E71ECBB00CF6A9F"
-               BuildableName = "wabi-sabiTests.xctest"
-               BlueprintName = "wabi-sabiTests"
-               ReferencedContainer = "container:wabi-sabi.xcodeproj">
+               BuildableName = "PolyHacksTests.xctest"
+               BlueprintName = "PolyHacksTests"
+               ReferencedContainer = "container:PolyHacks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4450A4001E71ECBB00CF6A9F"
-               BuildableName = "wabi-sabiTests.xctest"
-               BlueprintName = "wabi-sabiTests"
-               ReferencedContainer = "container:wabi-sabi.xcodeproj">
+               BuildableName = "PolyHacksTests.xctest"
+               BlueprintName = "PolyHacksTests"
+               ReferencedContainer = "container:PolyHacks.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4450A3E91E71ECBB00CF6A9F"
-            BuildableName = "wabi-sabi.app"
-            BlueprintName = "wabi-sabi"
-            ReferencedContainer = "container:wabi-sabi.xcodeproj">
+            BuildableName = "PolyHacks.app"
+            BlueprintName = "PolyHacks"
+            ReferencedContainer = "container:PolyHacks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4450A3E91E71ECBB00CF6A9F"
-            BuildableName = "wabi-sabi.app"
-            BlueprintName = "wabi-sabi"
-            ReferencedContainer = "container:wabi-sabi.xcodeproj">
+            BuildableName = "PolyHacks.app"
+            BlueprintName = "PolyHacks"
+            ReferencedContainer = "container:PolyHacks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4450A3E91E71ECBB00CF6A9F"
-            BuildableName = "wabi-sabi.app"
-            BlueprintName = "wabi-sabi"
-            ReferencedContainer = "container:wabi-sabi.xcodeproj">
+            BuildableName = "PolyHacks.app"
+            BlueprintName = "PolyHacks"
+            ReferencedContainer = "container:PolyHacks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

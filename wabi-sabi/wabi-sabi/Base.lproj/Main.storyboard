@@ -319,11 +319,11 @@
             </objects>
             <point key="canvasLocation" x="-156" y="469"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Info-->
         <scene sceneID="8zy-dw-g3a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WP0-FV-WQG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="oyZ-8D-1YT"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="icon_info" id="oyZ-8D-1YT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OIj-cy-FaT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -460,6 +460,7 @@
         <image name="IST_MAP.jpg" width="1920" height="1080"/>
         <image name="fpu_sga_upscaled.png" width="1500" height="1500"/>
         <image name="icon_announcements" width="25" height="25"/>
+        <image name="icon_info" width="25" height="25"/>
         <image name="icon_map" width="25" height="25"/>
         <image name="icon_schedule" width="25" height="25"/>
     </resources>
