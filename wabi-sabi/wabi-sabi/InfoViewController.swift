@@ -57,6 +57,7 @@ class InfoViewController: UITableViewController {
             }
         }
         performSegueWithIdentifier( segueID, sender: self )
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 //        let alert = UIAlertController(title: "Alert", message: "Message: \(segueID!).", preferredStyle: UIAlertControllerStyle.Alert);
 //        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil));
 //        self.presentViewController(alert, animated: true, completion: nil);

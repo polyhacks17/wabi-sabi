@@ -21,7 +21,7 @@ class SponsorsViewController: UITableViewController {
         ("MLH", "mlh.png", "https://mlh.io/"),
         ("Wolfram", "wolfram_logo_padded.png", "https://wolfram.com/"),
         ("GitHub", "github_logo_padded.png", "https://www.github.com/"),
-        ("Scott & Kim Johnson", "", ""),
+        ("Scott & Kim Johnson", "skjohnson.png", ""),
     ];
     
     override func viewDidLoad() {

@@ -17,7 +17,6 @@
 		4450A3F91E71ECBB00CF6A9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3F81E71ECBB00CF6A9F /* Images.xcassets */; };
 		4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */; };
 		4450A4081E71ECBB00CF6A9F /* wabi_sabiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */; };
-		4450A4141E7202F400CF6A9F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4131E7202F400CF6A9F /* ThirdViewController.swift */; };
 		4450A4161E72071D00CF6A9F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4151E72071D00CF6A9F /* InfoViewController.swift */; };
 		4450A4481E722E7900CF6A9F /* IST_MAP.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4450A4471E722E7900CF6A9F /* IST_MAP.jpg */; };
 		4450A44A1E72332200CF6A9F /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4491E72332200CF6A9F /* ContactsViewController.swift */; };
@@ -31,6 +30,8 @@
 		4450A45B1E72426500CF6A9F /* wolfram_logo_padded.png in Resources */ = {isa = PBXBuildFile; fileRef = 4450A4541E72426500CF6A9F /* wolfram_logo_padded.png */; };
 		4450A45F1E72431800CF6A9F /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A45E1E72431800CF6A9F /* SponsorsViewController.swift */; };
 		445C89831E77499D00A52787 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445C89821E77499D00A52787 /* Icons.xcassets */; };
+		449E83D61E79849B00A7E067 /* skjohnson.png in Resources */ = {isa = PBXBuildFile; fileRef = 449E83D51E79849B00A7E067 /* skjohnson.png */; };
+		449E83D81E798DB800A7E067 /* ScheduleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E83D71E798DB800A7E067 /* ScheduleInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,6 @@
 		4450A4011E71ECBB00CF6A9F /* PolyHacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyHacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4450A4061E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wabi_sabiTests.swift; sourceTree = "<group>"; };
-		4450A4131E7202F400CF6A9F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		4450A4151E72071D00CF6A9F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4450A4471E722E7900CF6A9F /* IST_MAP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IST_MAP.jpg; sourceTree = "<group>"; };
 		4450A4491E72332200CF6A9F /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +73,8 @@
 		4450A45E1E72431800CF6A9F /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		445C89821E77499D00A52787 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		445C89841E7775E400A52787 /* wabi-sabi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wabi-sabi-Bridging-Header.h"; sourceTree = "<group>"; };
+		449E83D51E79849B00A7E067 /* skjohnson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skjohnson.png; sourceTree = "<group>"; };
+		449E83D71E798DB800A7E067 /* ScheduleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +121,8 @@
 				4450A3F31E71ECBB00CF6A9F /* DownloadListViewController.swift */,
 				441AFC7B1E778252003290E2 /* AnnouncementsViewController.swift */,
 				441AFC7D1E778478003290E2 /* ScheduleViewController.swift */,
+				449E83D71E798DB800A7E067 /* ScheduleInfoViewController.swift */,
 				441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */,
-				4450A4131E7202F400CF6A9F /* ThirdViewController.swift */,
 				4450A4151E72071D00CF6A9F /* InfoViewController.swift */,
 				4450A4491E72332200CF6A9F /* ContactsViewController.swift */,
 				4450A44B1E7239B200CF6A9F /* DevTeamViewController.swift */,
@@ -165,6 +167,7 @@
 		4450A44D1E72426500CF6A9F /* SponsorImages */ = {
 			isa = PBXGroup;
 			children = (
+				449E83D51E79849B00A7E067 /* skjohnson.png */,
 				4450A44E1E72426500CF6A9F /* catapult_logo_padded.png */,
 				4450A44F1E72426500CF6A9F /* cesi.png */,
 				4450A4501E72426500CF6A9F /* fpu_sga_upscaled.png */,
@@ -258,6 +261,7 @@
 			files = (
 				4450A3F71E71ECBB00CF6A9F /* Main.storyboard in Resources */,
 				4450A4571E72426500CF6A9F /* fpu_sga_upscaled.png in Resources */,
+				449E83D61E79849B00A7E067 /* skjohnson.png in Resources */,
 				4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */,
 				4450A3F91E71ECBB00CF6A9F /* Images.xcassets in Resources */,
 				4450A45A1E72426500CF6A9F /* twilio_logo_padded.png in Resources */,
@@ -287,11 +291,11 @@
 			files = (
 				441AFC7C1E778252003290E2 /* AnnouncementsViewController.swift in Sources */,
 				441AFC781E777C1B003290E2 /* UIVerticalAlignLabel.swift in Sources */,
+				449E83D81E798DB800A7E067 /* ScheduleInfoViewController.swift in Sources */,
 				4450A3F41E71ECBB00CF6A9F /* DownloadListViewController.swift in Sources */,
 				4450A44C1E7239B200CF6A9F /* DevTeamViewController.swift in Sources */,
 				4450A44A1E72332200CF6A9F /* ContactsViewController.swift in Sources */,
 				4450A3F01E71ECBB00CF6A9F /* AppDelegate.swift in Sources */,
-				4450A4141E7202F400CF6A9F /* ThirdViewController.swift in Sources */,
 				4450A3F21E71ECBB00CF6A9F /* MapViewController.swift in Sources */,
 				4450A45F1E72431800CF6A9F /* SponsorsViewController.swift in Sources */,
 				441AFC7E1E778478003290E2 /* ScheduleViewController.swift in Sources */,

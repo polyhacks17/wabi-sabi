@@ -8,7 +8,7 @@
         <!--Map-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Map" id="9pv-A4-QxB" customClass="MapViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="9pv-A4-QxB" customClass="MapViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -56,7 +56,7 @@
         <!--Announcements-->
         <scene sceneID="N5a-Nf-cwQ">
             <objects>
-                <tableViewController title="Announcements" id="2iU-Ki-STY" customClass="AnnouncementsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Announcements" id="2iU-Ki-STY" customClass="AnnouncementsViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Cr-LD-Eyq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJW-ci-oOg" customClass="UIVerticalAlignLabel" customModule="wabi_sabi" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJW-ci-oOg" customClass="UIVerticalAlignLabel" customModule="PolyHacks" customModuleProvider="target">
                                             <rect key="frame" x="16" y="46" width="568" height="45"/>
                                             <string key="text">Labeln thatja ;aegiajeg;iegj ;aeligjaeg ;ilaej g;laiegj a;glij aeg;lije g;liejg;aeglija;glijag;laijga;lgija g;liaj gi;laejg aeig jaeligj eagijgjgiojegio gioejg geoijgoi gjg eioejgiogejoeig eogij egoij egoijegioegj ogiej jgoei egio egoijeg eg</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -147,7 +147,7 @@
         <!--Dev Team-->
         <scene sceneID="bmJ-5q-HEA">
             <objects>
-                <tableViewController title="Dev Team" id="W3c-PV-rnO" customClass="DevTeamViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Dev Team" id="W3c-PV-rnO" customClass="DevTeamViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Ont-Lh-XZu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,7 +187,7 @@
         <!--Sponsors-->
         <scene sceneID="DfE-in-zy6">
             <objects>
-                <tableViewController title="Sponsors" id="5oA-cL-x9V" customClass="SponsorsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Sponsors" id="5oA-cL-x9V" customClass="SponsorsViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="273" sectionHeaderHeight="22" sectionFooterHeight="22" id="f2i-L2-LrM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
         <!--Contacts-->
         <scene sceneID="wH6-bD-3QW">
             <objects>
-                <tableViewController title="Contacts" id="3yb-CB-MuC" customClass="ContactsViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Contacts" id="3yb-CB-MuC" customClass="ContactsViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wed-UA-6GA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,7 +268,7 @@
         <!--Info-->
         <scene sceneID="Ddw-2H-4qL">
             <objects>
-                <tableViewController title="Info" id="Wb9-wv-ds2" customClass="InfoViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Info" id="Wb9-wv-ds2" customClass="InfoViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="5UU-Rd-xFy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,7 +379,7 @@
         <!--Schedule-->
         <scene sceneID="eUG-ZS-0n2">
             <objects>
-                <tableViewController title="Schedule" id="VJa-94-K5F" customClass="ScheduleViewController" customModule="wabi_sabi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Schedule" id="VJa-94-K5F" customClass="ScheduleViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="xJx-5r-2AD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,7 +396,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-Ff-CQA" customClass="UIVerticalAlignLabel" customModule="wabi_sabi" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-Ff-CQA" customClass="UIVerticalAlignLabel" customModule="PolyHacks" customModuleProvider="target">
                                             <rect key="frame" x="16" y="46" width="568" height="45"/>
                                             <string key="text">Labeln thatja ;aegiajeg;iegj ;aeligjaeg ;ilaej g;laiegj a;glij aeg;lije g;liejg;aeglija;glijag;laijga;lgija g;liaj gi;laejg aeig jaeligj eagijgjgiojegio gioejg geoijgoi gjg eioejgiogejoeig eogij egoij egoijegioegj ogiej jgoei egio egoijeg eg</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -420,6 +420,9 @@
                                         <constraint firstItem="VdQ-cU-dqp" firstAttribute="leading" secondItem="z1G-hc-Tx7" secondAttribute="trailing" constant="8" id="z97-nx-btT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ufn-FF-E77" kind="show" identifier="SegueToScheduleInfo" id="N6b-5O-dQ7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -435,6 +438,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfU-WQ-IIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2266" y="1108"/>
+        </scene>
+        <!--Schedule Info-->
+        <scene sceneID="zGB-Oc-sCt">
+            <objects>
+                <viewController title="Schedule Info" id="ufn-FF-E77" customClass="ScheduleInfoViewController" customModule="PolyHacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gjv-fQ-fvW"/>
+                        <viewControllerLayoutGuide type="bottom" id="m75-ua-WqD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H6D-0N-x4a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy3-OJ-vU3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uy3-OJ-vU3" firstAttribute="leading" secondItem="H6D-0N-x4a" secondAttribute="leadingMargin" constant="-16" id="7fs-13-nYN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uy3-OJ-vU3" secondAttribute="trailing" constant="-16" id="Z1E-dP-pq8"/>
+                            <constraint firstItem="uy3-OJ-vU3" firstAttribute="top" secondItem="H6D-0N-x4a" secondAttribute="topMargin" id="htq-Zq-rav"/>
+                            <constraint firstItem="uy3-OJ-vU3" firstAttribute="bottom" secondItem="H6D-0N-x4a" secondAttribute="bottomMargin" id="nod-YR-7e4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="uy3-OJ-vU3" id="qLg-pj-8FH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUs-yA-BB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2992" y="1108"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="C6e-B0-6Uc">

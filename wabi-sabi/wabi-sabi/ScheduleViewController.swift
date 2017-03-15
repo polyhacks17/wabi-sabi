@@ -11,6 +11,7 @@ import UIKit
 class ScheduleViewController: DownloadListViewController {
     
     let debugging = false
+    let segueScheduleInfoID = "SegueToScheduleInfo"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,16 +42,28 @@ class ScheduleViewController: DownloadListViewController {
         return "ScheduleCell"
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // get data
-        let title = tableData[indexPath.row].0
-        let desc = tableData[indexPath.row].1
-        let time = tableData[indexPath.row].2
-        let ext_desc = tableData[indexPath.row].3
-        
-        // display data
-        let alert = UIAlertController(title: title, message: "Starts at \(time)\n\n\(desc)\n\(ext_desc)", preferredStyle: UIAlertControllerStyle.Alert);
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil));
-        self.presentViewController(alert, animated: true, completion: nil);
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == segueScheduleInfoID {
+            var selectedPath = tableView.indexPathForSelectedRow()!
+            
+            // get data of currently selected row
+            let title = tableData[selectedPath.row].0
+            let desc = tableData[selectedPath.row].1
+            let time = tableData[selectedPath.row].2
+            let ext_desc = tableData[selectedPath.row].3
+//
+            var scheduleInfo = segue.destinationViewController as ScheduleInfoViewController
+            scheduleInfo.title = title
+            scheduleInfo.text = "Start time: \(time)\n\n\(desc)\n\n\(ext_desc)"
+            
+            
+            tableView.deselectRowAtIndexPath(selectedPath, animated: true)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        return cell
     }
 }

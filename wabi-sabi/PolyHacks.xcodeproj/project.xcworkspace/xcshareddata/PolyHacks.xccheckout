@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>967EDC26-4114-4CA6-9C6C-94BE92423FEB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PolyHacks</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EB93D7E9E8E7404153E02D8F3DB63E4EE41D2130</key>
+		<string>https://github.com/r3pwn/PolyHacks2017</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>wabi-sabi/PolyHacks.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EB93D7E9E8E7404153E02D8F3DB63E4EE41D2130</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/r3pwn/PolyHacks2017</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EB93D7E9E8E7404153E02D8F3DB63E4EE41D2130</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB93D7E9E8E7404153E02D8F3DB63E4EE41D2130</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PolyHacks2017</string>
+		</dict>
+	</array>
+</dict>
+</plist>

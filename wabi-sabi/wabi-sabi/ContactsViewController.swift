@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import MessageUI
 
-class ContactsViewController: UITableViewController, UIAlertViewDelegate {
+class ContactsViewController: UITableViewController, MFMessageComposeViewControllerDelegate {
 
     // a list of tuples: .0 = cell name, .1 = segue to activate upon clicking the cell.
     var numbers = [
-        ("Campus Police", "(863)-874-8472", "For non-emergencies contact the polic department by tapping the number above. If you are near a blue light emergency phone, simply press the red button and you will be contacted by a police officer. For any emergency situations, dial 911."),
+        ("Campus Police", "(863)-874-8472", "For non-emergencies contact the police department by tapping the number above. If you are near a blue light emergency phone, simply press the red button and you will be contacted by a police officer. For any emergency situations, dial 911."),
         ("PolyHacks Dev Team", "(863)-606-8486", "Texting this number will put you in contact with one of the members of the Dev Team. You can contact us if you wish to speak with a mentor or wish to receive technical help related to the event.")
     ];
     
@@ -49,20 +50,26 @@ class ContactsViewController: UITableViewController, UIAlertViewDelegate {
         if (number == nil) {
             return;
         }
-        // confirm that the user wants to call the number
-        let alert = UIAlertController(title: "Call Number", message: "Call \(number!)?", preferredStyle: UIAlertControllerStyle.Alert);
-        let callAction = UIAlertAction(title: "Call", style: UIAlertActionStyle.Default) {
-            UIAlertAction in
+        if indexPath.row == 0 { // campus police #
             // call the number
             let url = NSURL(string: "telprompt://\(number!)")!
             if (UIApplication.sharedApplication().canOpenURL(url)) {
                 UIApplication.sharedApplication().openURL(url)
             }
+        } else if indexPath.row == 1 { // textable dev team #
+            if MFMessageComposeViewController.canSendText() {
+                let controller = MFMessageComposeViewController()
+                controller.body = "Message From PolyHacks App User"
+                controller.recipients = [numbers[indexPath.row].1]
+                controller.messageComposeDelegate = self
+                self.presentViewController(controller, animated: true, completion: nil)
+            }
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil));
-        alert.addAction(callAction);
-        self.presentViewController(alert, animated: true, completion: nil);
-        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
