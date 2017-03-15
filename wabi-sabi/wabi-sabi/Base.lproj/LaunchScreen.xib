@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,31 +10,55 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2017 Hutchison, Gabriel. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PolyHacks" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tabBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knb-0c-t6w">
+                    <rect key="frame" x="0.0" y="431" width="480" height="49"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <items>
+                        <tabBarItem image="icon_map" id="MHf-Um-bYV"/>
+                        <tabBarItem title="" image="icon_announcements" id="ElS-Zb-SJK"/>
+                        <tabBarItem title="" image="icon_schedule" id="WwJ-Dw-4DW"/>
+                        <tabBarItem image="icon_info" id="lVd-uV-cF2"/>
+                    </items>
+                </tabBar>
+                <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8d-oL-Pfb">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                    <items>
+                        <navigationItem id="thR-jG-DJW"/>
+                    </items>
+                </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="IST_MAP.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wOM-v9-7Fq">
+                    <rect key="frame" x="0.0" y="44" width="480" height="387"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="N8d-oL-Pfb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2j8-UT-Jsu"/>
+                <constraint firstAttribute="trailing" secondItem="Knb-0c-t6w" secondAttribute="trailing" id="4O0-Q6-iDi"/>
+                <constraint firstItem="wOM-v9-7Fq" firstAttribute="top" secondItem="N8d-oL-Pfb" secondAttribute="bottom" constant="4" id="5vq-Dg-9Qg">
+                    <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="Knb-0c-t6w" secondAttribute="bottom" id="9Wu-1J-4WS"/>
+                <constraint firstAttribute="trailing" secondItem="wOM-v9-7Fq" secondAttribute="trailing" constant="4" id="GAJ-vT-3N0">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="N8d-oL-Pfb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hi3-mH-O5C"/>
+                <constraint firstAttribute="trailing" secondItem="N8d-oL-Pfb" secondAttribute="trailing" id="RoD-YN-iBv"/>
+                <constraint firstItem="Knb-0c-t6w" firstAttribute="top" secondItem="wOM-v9-7Fq" secondAttribute="bottom" id="lzP-3E-iUf"/>
+                <constraint firstItem="Knb-0c-t6w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qUW-o2-PuT"/>
+                <constraint firstItem="wOM-v9-7Fq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="qtI-aD-RKv">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="IST_MAP.jpg" width="1920" height="1080"/>
+        <image name="icon_announcements" width="25" height="25"/>
+        <image name="icon_info" width="25" height="25"/>
+        <image name="icon_map" width="25" height="25"/>
+        <image name="icon_schedule" width="25" height="25"/>
+    </resources>
 </document>

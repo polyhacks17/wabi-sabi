@@ -43,6 +43,11 @@ class DevTeamViewController: UITableViewController {
         cell.textLabel?.text = site + " (\(username))"
         cell.detailTextLabel?.text = link
         cell.textLabel?.textColor = self.navigationController?.navigationBar.tintColor
+        
+        // accessibility
+        let name = members[indexPath.section]
+        cell.accessibilityHint = "\(name)'s \(site) account is \(username)."
+        
         return cell;
     }
     
