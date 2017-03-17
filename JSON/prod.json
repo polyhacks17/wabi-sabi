@@ -50,7 +50,7 @@
 		"time": "03:00 PM",
 		"desc": "The end of the event",
 		"ext_desc": "I think this is when prizes are given out..."
-	},
+	}],
 	"announcements": [{
 		"title": "Announcements Page",
 		"desc": "Any and all announcements we make will appear here"
