@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class JSONHandler {
 
-    private String URL = "https://raw.githubusercontent.com/r3pwn/PolyHacks2017/master/JSON/test.json"; // github string goes here
+    private String URL = "https://raw.githubusercontent.com/r3pwn/PolyHacks2017/master/JSON/prod.json"; // github string goes here
     private JsonObject JSON = new JsonParser().parse("{\"title\":\"It hasn\'t loaded the object\", \"schedule\": [{\"title\": \"blank\"}], \"announcements\": [{\"title\": \"blank\"}]}").getAsJsonObject();
     private static JSONHandler master = null;
 
@@ -101,7 +101,7 @@ public class JSONHandler {
 
     private class getJSON extends AsyncTask<String, Void, String>
     {
-        private String URL = "https://raw.githubusercontent.com/r3pwn/PolyHacks2017/master/JSON/test.json";
+        private String URL = "https://raw.githubusercontent.com/r3pwn/PolyHacks2017/master/JSON/prod.json";
         private String JSONstring = null;
 
 
