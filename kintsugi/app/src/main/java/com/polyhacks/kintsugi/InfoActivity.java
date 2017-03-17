@@ -191,6 +191,40 @@ public class InfoActivity extends AppCompatActivity {
         licenseParams.addRule(RelativeLayout.BELOW, licenseInfo.getId());
         license.setPadding(0, 20, 0, 0);
         rl.addView(license, licenseParams);
-        /*  */
+
+        TextView pVlicenseInfo = new TextView(InfoActivity.this);
+        RelativeLayout.LayoutParams pVlicenseInfoParams = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        pVlicenseInfo.setId(generateViewId());
+        pVlicenseInfo.setText("\nThis app also uses the PhotoView library by Chris Banes, which is " +
+                "also licensed under the Apache 2 license. You can find a copy of the license below.");
+        pVlicenseInfo.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
+        pVlicenseInfoParams.addRule(RelativeLayout.BELOW, license.getId());
+        pVlicenseInfo.setPadding(0, 10, 0, 0);
+        rl.addView(pVlicenseInfo, pVlicenseInfoParams);
+
+        TextView pVlicense = new TextView(InfoActivity.this);
+        RelativeLayout.LayoutParams pVlicenseParams = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        pVlicense.setId(generateViewId());
+        SpannableString spannablepVLicense = new SpannableString(
+                "Copyright 2016 Chris Banes\n" +
+                        "Licensed under the Apache License, Version 2.0 (the \"License\"); " +
+                        "you may not use this file except in compliance with the License. " +
+                        "You may obtain a copy of the License at\n" +
+                        "\n" +
+                        "http://www.apache.org/licenses/LICENSE-2.0\n" +
+                        "\n" +
+                        "Unless required by applicable law or agreed to in writing, software " +
+                        "distributed under the License is distributed on an \"AS IS\" BASIS, " +
+                        "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. " +
+                        "See the License for the specific language governing permissions and " +
+                        "limitations under the License.");
+        pVlicense.setText(spannablepVLicense);
+        pVlicense.setTypeface(Typeface.MONOSPACE);
+        pVlicense.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
+        pVlicenseParams.addRule(RelativeLayout.BELOW, pVlicenseInfo.getId());
+        pVlicense.setPadding(0, 20, 0, 0);
+        rl.addView(pVlicense, pVlicenseParams);
     }
 }

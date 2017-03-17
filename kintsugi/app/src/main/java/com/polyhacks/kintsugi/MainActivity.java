@@ -1,7 +1,10 @@
 package com.polyhacks.kintsugi;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,11 +13,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import uk.co.senab.photoview.PhotoView;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Boolean backPressedOnce = false;
+    Boolean mapIsOnBottomFloor = true;
+    PhotoViewAttacher mapAttacher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +43,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setCheckedItem(R.id.nav_map);
         navigationView.setNavigationItemSelectedListener(this);
+
+        RelativeLayout mapContainer = (RelativeLayout) findViewById(R.id.content_main);
+        mapContainer.setBackgroundResource(R.drawable.ist_map_bg_gradient);
+        final PhotoView mapView = (PhotoView) findViewById(R.id.mapView);
+        final Drawable mapBottomFloor = getResources().getDrawable(R.drawable.ist_map_bottomfloor_walpha);
+        final Drawable mapTopFloor = getResources().getDrawable(R.drawable.event_floor);
+
+        mapView.setImageDrawable(mapBottomFloor);
+        mapView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        mapAttacher = new PhotoViewAttacher(mapView);
+
+        final FloatingActionButton mapFab = (FloatingActionButton)findViewById(R.id.mapFAB);
+        mapFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mapIsOnBottomFloor == true)
+                {
+                    mapView.setImageDrawable(mapTopFloor);
+                    mapIsOnBottomFloor = false;
+                    mapAttacher.update();
+                    mapFab.setImageResource(R.drawable.ic_arrow_down);
+                } else {
+                    mapView.setImageDrawable(mapBottomFloor);
+                    mapIsOnBottomFloor = true;
+                    mapAttacher.update();
+                    mapFab.setImageResource(R.drawable.ic_arrow_up);
+                }
+            }
+        });
     }
 
     @Override
