@@ -1,166 +1,61 @@
 {
 	"title": "Florida Polyhacks Info Dump",
 	"schedule": [{
-		"title": "Signup Begins",
-		"time": "03:00 PM",
-		"desc": "This is an example of a description",
-		"ext_desc": "This is an example of a much longer description that goes into a file."
-	}, {
-		"title": "Bee Movie starts",
-		"time": "04:00 PM",
-		"desc": "Bee movie is best movie",
-		"ext_desc": "I am using the isbn api to transfer data."
-	}, {
-		"title": "Lit Sign-In ends",
-		"time": "05:00 PM",
-		"desc": "Lit is the only way to register",
-		"ext_desc": "LIT IS BEST SIGNIN SYSTEM."
-	}, {
-		"title": "Scavenger Hunt",
-		"time": "06:00 PM",
-		"desc": "Scavenger hunt begins",
-		"ext_desc": "Secret hint"
-	}, {
-		"title": "ionic dies",
-		"time": "07:00 PM",
-		"desc": "down with ionic",
-		"ext_desc": "Ionic has died today"
-	}, {
-		"title": "final",
-		"time": "08:00 PM",
-		"desc": "Out of ideas",
-		"ext_desc": "I am using the isbn api to transfer data."
-	}, {
-		"title": "This is a change",
-		"time": "09:00 PM",
-		"desc": "",
-		"ext_desc": "Ionic has died today"
-	}, {
-		"title": "",
-		"time": "10:00 PM",
-		"desc": "",
-		"ext_desc": "Ionic has died today"
-	}, {
-		"title": "",
-		"time": "11:00 PM",
-		"desc": "",
-		"ext_desc": "Ionic has died today"
-	}, {
-		"title": "",
-		"time": "12:00 AM",
-		"desc": "",
-		"ext_desc": "Ionic has died today"
-	}, {
-		"title": "",
-		"time": "01:00 AM",
-		"desc": "",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
-		"time": "02:00 AM",
-		"desc": "",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
-		"time": "03:00 AM",
-		"desc": "",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
-		"time": "04:00 AM",
-		"desc": "",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
-		"time": "05:00 AM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
-		"time": "06:00 AM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
-		"time": "07:00 AM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
-		"time": "08:00 AM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
+		"title": "Sign-in Begins",
 		"time": "09:00 AM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
+		"desc": "Hackers will begin signing in",
+		"ext_desc": "Hackers can begin signing in at the LOCATION PLACE"
 	}, {
-		"title": "",
-		"time": "10:00 AM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
-	}, {
-		"title": "",
+		"title": "Opening Ceremony",
 		"time": "11:00 AM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
+		"desc": "A basic introduction and welcoming",
+		"ext_desc": "The opening ceremony lets us tell you a little bit about how things will go during the event."
 	}, {
-		"title": "",
+		"title": "Lunch",
 		"time": "12:00 PM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
+		"desc": "Meal sponsored by SPONSOR",
+		"ext_desc": "The meal will consist of FOOD_A, FOOD_B, and FOOD_C."
 	}, {
-		"title": "",
+		"title": "Team Building",
+		"time": "12:00 PM",
+		"desc": "Meal sponsored by SPONSOR",
+		"ext_desc": "Need a partner? We got you covered. We help you get into a team if you don't have one already."
+	}, {
+		"title": "Hacking Starts",
+		"time": "12:30 PM",
+		"desc": "Hackers may begin to work on their hacks",
+		"ext_desc": "SOMETHING SOMETHING MOTIVATIONAL QUOTE"
+	}, {
+		"title": "Dinner",
+		"time": "06:00 PM",
+		"desc": "Meal sponsored by SPONSOR",
+		"ext_desc": "This meal will consist of FOOD_A, FOOD_B, and FOOD_C."
+	}, {
+		"title": "Breakfast",
+		"time": "08:00 AM",
+		"desc": "Meal sponsored by SPONSOR",
+		"ext_desc": "This meal will consist of FOOD_A, FOOD_B, and FOOD_C."
+	}, {
+		"title": "Hacking ends",
+		"time": "12:30 PM",
+		"desc": "The end of the 'hacking' portion of the event",
+		"ext_desc": "Not sure what to put here"
+	}, {
+		"title": "Lunch",
 		"time": "01:00 PM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
+		"desc": "Meal sponsored by SPONSOR",
+		"ext_desc": "This meal will consist of FOOD_A, FOOD_B, and FOOD_C."
 	}, {
-		"title": "",
-		"time": "02:00 PM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
-	}, {
-		"title": "Event End",
+		"title": "Closing Ceremony",
 		"time": "03:00 PM",
-		"desc": "Empty",
-		"ext_desc": "Empty"
-	}],
+		"desc": "The end of the event",
+		"ext_desc": "I think this is when prizes are given out..."
+	},
 	"announcements": [{
-		"title": "Test 1",
-		"desc": "This is a test announcement so we can test updating announcements."
+		"title": "Announcements Page",
+		"desc": "Any and all announcements we make will appear here"
 	}, {
-		"title": "Test 2",
-		"desc": "Only a Shrek modder can control the swamp."
-	}, {
-		"title": "There are a lot of tests here",
-		"desc": "blurt blinking viper hyaena bye scheme downfall moth cords available"
-	}, {
-		"title": "Test 4",
-		"desc": "servant diplomatic paralysis rib chameleon costumed dynamic violence grab biter"
-	}, {
-		"title": "Test 5",
-		"desc": "guerilla hottest effective distancing beak biplane downtown gulf dead advocate"
-	}, {
-		"title": "Another announcment test",
-		"desc": "gear glutton develop canvas drifter brood blurt channel flirtation moonbeam"
-	}, {
-		"title": "Test 7",
-		"desc": "kangaroo privilege last blurt king fade heaven gaping cricket propellant"
-	}, {
-		"title": "Test 8",
-		"desc": "enzyme heavyhearted fortuneteller hive abstinence allow liver daydreamer gibberish firearm"
-	}, {
-		"title": "Test 9",
-		"desc": "desire sick flicker threat sentinel luxurious antidemocratic eating bead forger"
-	}, {
-		"title": "Another test",
-		"desc": "homesick flood booze talk treason evidence zero captivity jerid entertain"
-	}, {
-		"title": "One more test",
-		"desc": "alley key godless collarbone hesitation tactic east lottery grunting bear"
-	}, {
-		"title": "The final test",
-		"desc": "enzyme anybody fringe bottomless grounds hipbone clock antelope record flamethrower"
+		"title": "Second Announcement",
+		"desc": "We can have multiple announcements..."
 	}]
 }
