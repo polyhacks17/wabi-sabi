@@ -1,0 +1,22 @@
+PODS:
+  - ImageScrollView (1.2)
+
+DEPENDENCIES:
+  - ImageScrollView (from `https://github.com/huynguyencong/ImageScrollView.git`, commit `4ed28cafd55b313345fbd25d86c6bb53d4ed7072`)
+
+EXTERNAL SOURCES:
+  ImageScrollView:
+    :commit: 4ed28cafd55b313345fbd25d86c6bb53d4ed7072
+    :git: https://github.com/huynguyencong/ImageScrollView.git
+
+CHECKOUT OPTIONS:
+  ImageScrollView:
+    :commit: 4ed28cafd55b313345fbd25d86c6bb53d4ed7072
+    :git: https://github.com/huynguyencong/ImageScrollView.git
+
+SPEC CHECKSUMS:
+  ImageScrollView: 2de448b9dcdd440d172b607f5f7abb8180c564fd
+
+PODFILE CHECKSUM: 2fabfa78339fb6257e518fa777c3b34d0afd3ab3
+
+COCOAPODS: 1.2.0
