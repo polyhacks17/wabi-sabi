@@ -30,7 +30,7 @@ class ScheduleViewController: DownloadListViewController {
         if debugging {
             return "https://www.polyhacks.com/eventData/test.json"
         } else {
-            return "https://www.polyhacks.com/eventData/data.json"
+            return "https://raw.githubusercontent.com/polyhacks17/json/master/prod.json"
         }
     }
     
@@ -51,7 +51,7 @@ class ScheduleViewController: DownloadListViewController {
             let desc = tableData[selectedPath.row].1
             let time = tableData[selectedPath.row].2
             let ext_desc = tableData[selectedPath.row].3
-//
+
             var scheduleInfo = segue.destinationViewController as ScheduleInfoViewController
             scheduleInfo.title = title
             scheduleInfo.text = "Start time: \(time)\n\n\(desc)\n\n\(ext_desc)"
