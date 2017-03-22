@@ -29,7 +29,7 @@ class AnnouncementsViewController: DownloadListViewController {
         if debugging {
             return "https://www.polyhacks.com/eventData/test.json"
         } else {
-            return "https://www.polyhacks.com/eventData/data.json"
+            return "https://raw.githubusercontent.com/polyhacks17/json/master/prod.json"
         }
     }
     
