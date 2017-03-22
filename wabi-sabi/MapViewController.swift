@@ -69,7 +69,11 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         // hack way to make the view defaulted to zoom = 1
+        self.scrollView.alpha = 0
         floor = SECOND_FLOOR
         floorNavButtonTap(UIBarButtonItem())
     }
@@ -78,7 +82,6 @@ class MapViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
