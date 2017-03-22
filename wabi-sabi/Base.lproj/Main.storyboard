@@ -17,23 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ist_map_bottomfloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="YLI-Go-pRU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" maximumZoomScale="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ek-LCi" customClass="ImageScrollView" customModule="ImageScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <accessibility key="accessibilityConfiguration" label="Map of the IST">
-                                    <string key="hint">Florida Polytechnic University's IST (Innovation, Science, and Technology) building. Upon entering the south side of the building, walking along the right you will find rooms 1002 and 1003. You can then turn left into a corridor with bathrooms in the middle. Alternatively, upon entering the south side, you walking along the left you will find rooms 1068 and 1067. Alternatively, upon entering the south side, walking straigh forward will take you upstairs into the large common area. The majority of the event will occur in these areas.</string>
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="YLI-Go-pRU" secondAttribute="trailing" constant="-16" id="Dtt-6d-GvJ"/>
-                            <constraint firstItem="YLI-Go-pRU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="MGm-xg-RZy"/>
-                            <constraint firstItem="YLI-Go-pRU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Q3J-No-Yub"/>
-                            <constraint firstItem="YLI-Go-pRU" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="edO-cA-3Cw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Mb-ek-LCi" secondAttribute="trailing" constant="-16" id="Mng-dq-sAP"/>
+                            <constraint firstItem="0Mb-ek-LCi" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="XDG-am-Miq"/>
+                            <constraint firstItem="0Mb-ek-LCi" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="sdO-Jf-jjm"/>
+                            <constraint firstItem="0Mb-ek-LCi" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="wvh-gh-26H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="Sed-4I-KRy">
@@ -45,7 +39,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="floorNavButton" destination="0qT-fP-39p" id="rGC-lX-I7j"/>
-                        <outlet property="map" destination="YLI-Go-pRU" id="4qU-ws-tWZ"/>
+                        <outlet property="scrollView" destination="0Mb-ek-LCi" id="w4d-f9-T5m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -553,6 +547,5 @@
         <image name="icon_info" width="25" height="25"/>
         <image name="icon_map" width="25" height="25"/>
         <image name="icon_schedule" width="25" height="25"/>
-        <image name="ist_map_bottomfloor.png" width="586" height="841"/>
     </resources>
 </document>
