@@ -23,7 +23,9 @@
                 <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8d-oL-Pfb">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
                     <items>
-                        <navigationItem id="thR-jG-DJW"/>
+                        <navigationItem title=" " id="thR-jG-DJW">
+                            <barButtonItem key="rightBarButtonItem" image="button_up" id="f4Q-RB-y0y"/>
+                        </navigationItem>
                     </items>
                 </navigationBar>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ist_map_bottomfloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="wOM-v9-7Fq">
@@ -55,6 +57,7 @@
         </view>
     </objects>
     <resources>
+        <image name="button_up" width="25" height="25"/>
         <image name="icon_announcements" width="25" height="25"/>
         <image name="icon_info" width="25" height="25"/>
         <image name="icon_map" width="25" height="25"/>

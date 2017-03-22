@@ -15,6 +15,8 @@ class MapViewController: UIViewController {
     var FIRST_FLOOR: Int
     var SECOND_FLOOR: Int
     var floor: Int
+    var mapTitle: String
+    var floorTitles: [Int:String]
 
     required init(coder aDecoder: NSCoder) {
         FIRST_FLOOR = 0
@@ -27,6 +29,11 @@ class MapViewController: UIViewController {
         mapImages = [
             FIRST_FLOOR: "ist_map_bottomfloor.png",
             SECOND_FLOOR: "ist_map_eventfloor.png"
+        ]
+        mapTitle = "Map"
+        floorTitles = [
+            FIRST_FLOOR: "First Floor",
+            SECOND_FLOOR: "Commons"
         ]
         super.init(coder: aDecoder)
     }
@@ -53,11 +60,12 @@ class MapViewController: UIViewController {
         map.image = UIImage(named: mapImages[floor]!)
         floorNavButton.image = UIImage(named: navImages[floor]!)
         // fade in and out to make it look nicer
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.animateWithDuration(0.25, animations: {
             self.map.alpha = 0;
             self.map.image = UIImage(named: self.mapImages[self.floor]!);
             self.map.alpha = 1;
         })
+        changeNavTitle(self.floor)
     }
     
     func alert(message: AnyObject) {
@@ -66,9 +74,14 @@ class MapViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil);
     }
     
+    func changeNavTitle(floor: Int) {
+        self.navigationItem.title = self.mapTitle + " (" + self.floorTitles[floor]! + ")"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        changeNavTitle(self.floor)
     }
 
     override func didReceiveMemoryWarning() {
