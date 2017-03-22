@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IST_MAP.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YLI-Go-pRU">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ist_map_bottomfloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="YLI-Go-pRU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <accessibility key="accessibilityConfiguration" label="Map of the IST">
                                     <string key="hint">Florida Polytechnic University's IST (Innovation, Science, and Technology) building. Upon entering the south side of the building, walking along the right you will find rooms 1002 and 1003. You can then turn left into a corridor with bathrooms in the middle. Alternatively, upon entering the south side, you walking along the left you will find rooms 1068 and 1067. Alternatively, upon entering the south side, walking straigh forward will take you upstairs into the large common area. The majority of the event will occur in these areas.</string>
@@ -36,7 +36,17 @@
                             <constraint firstItem="YLI-Go-pRU" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="edO-cA-3Cw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="Sed-4I-KRy"/>
+                    <navigationItem key="navigationItem" title="Map" id="Sed-4I-KRy">
+                        <barButtonItem key="rightBarButtonItem" image="button_up" id="0qT-fP-39p">
+                            <connections>
+                                <action selector="floorNavButtonTap:" destination="9pv-A4-QxB" id="lnw-QR-8sG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="floorNavButton" destination="0qT-fP-39p" id="rGC-lX-I7j"/>
+                        <outlet property="map" destination="YLI-Go-pRU" id="4qU-ws-tWZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -537,11 +547,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IST_MAP.jpg" width="1920" height="1080"/>
+        <image name="button_up" width="25" height="25"/>
         <image name="fpu_sga_upscaled.png" width="1500" height="1500"/>
         <image name="icon_announcements" width="25" height="25"/>
         <image name="icon_info" width="25" height="25"/>
         <image name="icon_map" width="25" height="25"/>
         <image name="icon_schedule" width="25" height="25"/>
+        <image name="ist_map_bottomfloor.png" width="586" height="841"/>
     </resources>
 </document>

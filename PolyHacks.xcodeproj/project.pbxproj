@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441926A21E82C026003F427E /* ist_map_bottomfloor.png in Resources */ = {isa = PBXBuildFile; fileRef = 441926A01E82C026003F427E /* ist_map_bottomfloor.png */; };
+		441926A31E82C026003F427E /* ist_map_eventfloor.png in Resources */ = {isa = PBXBuildFile; fileRef = 441926A11E82C026003F427E /* ist_map_eventfloor.png */; };
 		441AFC781E777C1B003290E2 /* UIVerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */; };
 		441AFC7C1E778252003290E2 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AFC7B1E778252003290E2 /* AnnouncementsViewController.swift */; };
 		441AFC7E1E778478003290E2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AFC7D1E778478003290E2 /* ScheduleViewController.swift */; };
@@ -18,7 +20,6 @@
 		4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */; };
 		4450A4081E71ECBB00CF6A9F /* wabi_sabiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */; };
 		4450A4161E72071D00CF6A9F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4151E72071D00CF6A9F /* InfoViewController.swift */; };
-		4450A4481E722E7900CF6A9F /* IST_MAP.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4450A4471E722E7900CF6A9F /* IST_MAP.jpg */; };
 		4450A44A1E72332200CF6A9F /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A4491E72332200CF6A9F /* ContactsViewController.swift */; };
 		4450A44C1E7239B200CF6A9F /* DevTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450A44B1E7239B200CF6A9F /* DevTeamViewController.swift */; };
 		4450A4551E72426500CF6A9F /* catapult_logo_padded.png in Resources */ = {isa = PBXBuildFile; fileRef = 4450A44E1E72426500CF6A9F /* catapult_logo_padded.png */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		441926A01E82C026003F427E /* ist_map_bottomfloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ist_map_bottomfloor.png; sourceTree = "<group>"; };
+		441926A11E82C026003F427E /* ist_map_eventfloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ist_map_eventfloor.png; sourceTree = "<group>"; };
 		441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVerticalAlignLabel.swift; sourceTree = "<group>"; };
 		441AFC7B1E778252003290E2 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		441AFC7D1E778478003290E2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		4450A4061E71ECBB00CF6A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4450A4071E71ECBB00CF6A9F /* wabi_sabiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wabi_sabiTests.swift; sourceTree = "<group>"; };
 		4450A4151E72071D00CF6A9F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		4450A4471E722E7900CF6A9F /* IST_MAP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IST_MAP.jpg; sourceTree = "<group>"; };
 		4450A4491E72332200CF6A9F /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		4450A44B1E7239B200CF6A9F /* DevTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevTeamViewController.swift; sourceTree = "<group>"; };
 		4450A44E1E72426500CF6A9F /* catapult_logo_padded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catapult_logo_padded.png; sourceTree = "<group>"; };
@@ -95,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4419269F1E82C026003F427E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				441926A01E82C026003F427E /* ist_map_bottomfloor.png */,
+				441926A11E82C026003F427E /* ist_map_eventfloor.png */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		4450A3E11E71ECBB00CF6A9F = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +141,10 @@
 				4450A3F51E71ECBB00CF6A9F /* Main.storyboard */,
 				4450A3F81E71ECBB00CF6A9F /* Images.xcassets */,
 				445C89821E77499D00A52787 /* Icons.xcassets */,
-				4450A4471E722E7900CF6A9F /* IST_MAP.jpg */,
 				4450A3FA1E71ECBB00CF6A9F /* LaunchScreen.xib */,
 				4450A44D1E72426500CF6A9F /* SponsorImages */,
 				4450A3ED1E71ECBB00CF6A9F /* Supporting Files */,
+				4419269F1E82C026003F427E /* Map */,
 				445C89841E7775E400A52787 /* wabi-sabi-Bridging-Header.h */,
 			);
 			path = "wabi-sabi";
@@ -260,8 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4450A3F71E71ECBB00CF6A9F /* Main.storyboard in Resources */,
+				441926A21E82C026003F427E /* ist_map_bottomfloor.png in Resources */,
 				4450A4571E72426500CF6A9F /* fpu_sga_upscaled.png in Resources */,
 				449E83D61E79849B00A7E067 /* skjohnson.png in Resources */,
+				441926A31E82C026003F427E /* ist_map_eventfloor.png in Resources */,
 				4450A3FC1E71ECBB00CF6A9F /* LaunchScreen.xib in Resources */,
 				4450A3F91E71ECBB00CF6A9F /* Images.xcassets in Resources */,
 				4450A45A1E72426500CF6A9F /* twilio_logo_padded.png in Resources */,
@@ -269,7 +282,6 @@
 				4450A4581E72426500CF6A9F /* github_logo_padded.png in Resources */,
 				4450A45B1E72426500CF6A9F /* wolfram_logo_padded.png in Resources */,
 				4450A4591E72426500CF6A9F /* mlh.png in Resources */,
-				4450A4481E722E7900CF6A9F /* IST_MAP.jpg in Resources */,
 				445C89831E77499D00A52787 /* Icons.xcassets in Resources */,
 				4450A4561E72426500CF6A9F /* cesi.png in Resources */,
 			);

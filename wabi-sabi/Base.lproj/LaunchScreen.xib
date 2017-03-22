@@ -26,7 +26,7 @@
                         <navigationItem id="thR-jG-DJW"/>
                     </items>
                 </navigationBar>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="IST_MAP.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wOM-v9-7Fq">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ist_map_bottomfloor.png" translatesAutoresizingMaskIntoConstraints="NO" id="wOM-v9-7Fq">
                     <rect key="frame" x="0.0" y="44" width="480" height="387"/>
                 </imageView>
             </subviews>
@@ -55,10 +55,10 @@
         </view>
     </objects>
     <resources>
-        <image name="IST_MAP.jpg" width="1920" height="1080"/>
         <image name="icon_announcements" width="25" height="25"/>
         <image name="icon_info" width="25" height="25"/>
         <image name="icon_map" width="25" height="25"/>
         <image name="icon_schedule" width="25" height="25"/>
+        <image name="ist_map_bottomfloor.png" width="586" height="841"/>
     </resources>
 </document>
