@@ -29,32 +29,32 @@ class ContactsViewController: UITableViewController, MFMessageComposeViewControl
     }
     
     // implement methods from tableviewdatasource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return numbers.count;
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("NumberCells", forIndexPath: indexPath) as UITableViewCell;
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NumberCells", for: indexPath) as UITableViewCell;
         cell.textLabel?.text = numbers[indexPath.section].1
         cell.textLabel?.textColor = self.navigationController?.navigationBar.tintColor
         return cell;
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell = tableView.cellForRowAtIndexPath(indexPath);
-        var number = cell?.textLabel?.text;
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath);
+        let number = cell?.textLabel?.text;
         if (number == nil) {
             return;
         }
         if indexPath.row == 0 { // campus police #
             // call the number
-            let url = NSURL(string: "telprompt://\(number!)")!
-            if (UIApplication.sharedApplication().canOpenURL(url)) {
-                UIApplication.sharedApplication().openURL(url)
+            let url = URL(string: "telprompt://\(number!)")!
+            if (UIApplication.shared.canOpenURL(url)) {
+                UIApplication.shared.openURL(url)
             }
         } else if indexPath.row == 1 { // textable dev team #
             if MFMessageComposeViewController.canSendText() {
@@ -62,21 +62,21 @@ class ContactsViewController: UITableViewController, MFMessageComposeViewControl
                 controller.body = "Message From PolyHacks App User"
                 controller.recipients = [numbers[indexPath.row].1]
                 controller.messageComposeDelegate = self
-                self.presentViewController(controller, animated: true, completion: nil)
+                self.present(controller, animated: true, completion: nil)
             }
         }
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func messageComposeViewController(_ controller: MFMessageComposeViewController!, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return numbers[section].0
     }
     
-    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return numbers[section].2
     }
 

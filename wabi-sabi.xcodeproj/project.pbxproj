@@ -277,14 +277,18 @@
 				TargetAttributes = {
 					4450A3E91E71ECBB00CF6A9F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3QQ26HYU6H;
+						LastSwiftMigration = 0820;
 					};
 					4450A4001E71ECBB00CF6A9F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3QQ26HYU6H;
+						LastSwiftMigration = 0820;
 						TestTargetID = 4450A3E91E71ECBB00CF6A9F;
 					};
 				};
 			};
-			buildConfigurationList = 4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "PolyHacks" */;
+			buildConfigurationList = 4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "wabi-sabi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -569,11 +573,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3QQ26HYU6H;
 				INFOPLIST_FILE = "wabi-sabi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PolyHacks;
 				SWIFT_OBJC_BRIDGING_HEADER = "wabi-sabi/wabi-sabi-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -583,10 +589,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3QQ26HYU6H;
 				INFOPLIST_FILE = "wabi-sabi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PolyHacks;
 				SWIFT_OBJC_BRIDGING_HEADER = "wabi-sabi/wabi-sabi-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -595,6 +603,7 @@
 			baseConfigurationReference = 5903216604268E43EDCCE0A6 /* Pods-PolyHacksTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3QQ26HYU6H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -606,7 +615,8 @@
 				INFOPLIST_FILE = "wabi-sabiTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = PolyHacksTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wabi-sabi.app/wabi-sabi";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolyHacks.app/PolyHacks";
 			};
 			name = Debug;
 		};
@@ -615,6 +625,7 @@
 			baseConfigurationReference = 7B94D04FB9005CD3820B4D56 /* Pods-PolyHacksTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3QQ26HYU6H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -622,14 +633,15 @@
 				INFOPLIST_FILE = "wabi-sabiTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = PolyHacksTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wabi-sabi.app/wabi-sabi";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolyHacks.app/PolyHacks";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "PolyHacks" */ = {
+		4450A3E51E71ECBB00CF6A9F /* Build configuration list for PBXProject "wabi-sabi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4450A4091E71ECBB00CF6A9F /* Debug */,

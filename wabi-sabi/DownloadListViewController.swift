@@ -17,7 +17,7 @@ class DownloadListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl?.addTarget(self, action: #selector(DownloadListViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
         refreshControl?.beginRefreshing()
         
         // load json in a new thread
@@ -31,16 +31,19 @@ class DownloadListViewController: UITableViewController {
     
     func loadData() {
         // before downloading, show the local, cached data
-        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
+        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true) as? [String] {
             let dir = dirs[0] // library directory
-            let path = dir.stringByAppendingPathComponent(cacheFileName())
+            let path = dir + "/" + cacheFileName()
             
-            let textData = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)?
+            var textData: String?
+            do {
+                textData = try String(contentsOf: URL(string: path)!, encoding: String.Encoding.utf8)
+            } catch {/* error handling here */}
             
             if textData == nil {
                 NSLog("Cache miss; downloading data")
             } else {
-                self.populateTable(parseJSON(NSData(contentsOfFile: path)!))
+                self.populateTable(parseJSON(try! Data(contentsOf: URL(fileURLWithPath: path))))
             }
         }
         
@@ -54,53 +57,52 @@ class DownloadListViewController: UITableViewController {
 //        self.presentViewController(alert, animated: true, completion: nil);
 //    }
     
-    func populateTable(data: NSDictionary) {
-        let datum = (data[dataKey()] as NSArray) as Array
+    func populateTable(_ data: NSDictionary) {
+        let datum = (data[dataKey()] as! NSArray) as Array
         tableData = []
         for elem in datum {
-            let typedElem: NSDictionary = elem as NSDictionary
-            let title = elem["title"] as String
-            let desc = elem["desc"] as String
-            let time = (hasKey(typedElem, key: "time")) ? elem["time"] as String : ""
-            let extendedDesc = (hasKey(typedElem, key: "ext_desc")) ? elem["ext_desc"] as String : ""
+            let typedElem: NSDictionary = elem as! NSDictionary
+            let title = elem["title"] as! String
+            let desc = elem["desc"] as! String
+            let time = (hasKey(typedElem, key: "time")) ? elem["time"] as! String : ""
+            let extendedDesc = (hasKey(typedElem, key: "ext_desc")) ? elem["ext_desc"] as! String : ""
             tableData.append(title, desc, time, extendedDesc)
         }
         tableView.reloadData()
         refreshControl?.endRefreshing()
     }
     
-    func hasKey(dict: NSDictionary, key: String) -> Bool {
-        let allKeys: NSArray = dict.allKeys
-        return allKeys.containsObject(key)
+    func hasKey(_ dict: NSDictionary, key: String) -> Bool {
+        let allKeys: NSArray = dict.allKeys as NSArray
+        return allKeys.contains(key)
     }
     
-    func handleRefresh(sender:AnyObject) {
+    func handleRefresh(_ sender:AnyObject) {
         NSLog("Refreshing content")
         downloadData()
         refreshControl?.beginRefreshing()
     }
     
     func downloadData() {
-        NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: dataURL())!, completionHandler: { (data, response, error) -> Void in
+        URLSession.shared.dataTask(with: URL(string: dataURL())!, completionHandler: { (data, response, error) -> Void in
             if error != nil {
-                print(error)
                 NSLog("Error downloading data")
                 return
             }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async(execute: { () -> Void in
                 // display data
-                var list = self.parseJSON(data)
+                let list = self.parseJSON(data!)
                 self.populateTable(list)
                 
                 // cache data for future reference
-                if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
+                if let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true) as? [String] {
                     let dir = dirs[0] // library directory
-                    let path = dir.stringByAppendingPathComponent(self.cacheFileName())
+                    let path = dir + "/" + self.cacheFileName()
                     
-                    let data2: NSData = data as NSData
-                    data2.writeToFile(path, atomically: false)
+                    let data2: Data = data! as Data
+                    try? data2.write(to: URL(fileURLWithPath: path), options: [])
                     
-                    if data2.writeToFile(path, atomically: false) == false {
+                    if ((try? data2.write(to: URL(fileURLWithPath: path), options: [])) != nil) == false {
                         NSLog("Could not cache downloaded data")
                     }
                 }
@@ -108,37 +110,39 @@ class DownloadListViewController: UITableViewController {
         }).resume();
     }
     
-    func getJSON(urlToRequest: NSURL) -> NSData {
-        return NSData(contentsOfURL: urlToRequest)!
+    func getJSON(_ urlToRequest: URL) -> Data {
+        return (try! Data(contentsOf: urlToRequest))
     }
     
-    func parseJSON(inputData: NSData) -> NSDictionary {
-        var error: NSError?
-        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-        return boardsDictionary
+    func parseJSON(_ inputData: Data) -> NSDictionary {
+        var boardsDictionary: NSDictionary?
+        do {
+            boardsDictionary = try JSONSerialization.jsonObject(with: inputData, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+        } catch {}
+        return boardsDictionary!
     }
     
     // implement methods from tableviewdatasource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID(), forIndexPath: indexPath) as UITableViewCell;
-        var title = cell.contentView.viewWithTag(titleTag) as? UILabel
-        var time = cell.contentView.viewWithTag(timeTag) as? UILabel
-        var desc = cell.contentView.viewWithTag(descTag) as? UIVerticalAlignLabel
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseID(), for: indexPath) as UITableViewCell;
+        let title = cell.contentView.viewWithTag(titleTag) as? UILabel
+        let time = cell.contentView.viewWithTag(timeTag) as? UILabel
+        let desc = cell.contentView.viewWithTag(descTag) as? UIVerticalAlignLabel
         title?.text = tableData[indexPath.row].0
         desc?.text = tableData[indexPath.row].1
         time?.text = tableData[indexPath.row].2
         return cell;
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         refreshControl?.endRefreshing()
     }
     

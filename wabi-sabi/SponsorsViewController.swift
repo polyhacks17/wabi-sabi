@@ -36,44 +36,44 @@ class SponsorsViewController: UITableViewController {
     }
     
     // implement methods from tableviewdatasource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sponsors.count;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("SponsorCells", forIndexPath: indexPath) as UITableViewCell;
-        var image = cell.contentView.viewWithTag(imageTag) as? UIImageView
-        var label = cell.contentView.viewWithTag(labelTag) as? UILabel
-        var url = cell.contentView.viewWithTag(urlTag) as? UILabel
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SponsorCells", for: indexPath) as UITableViewCell;
+        let image = cell.contentView.viewWithTag(imageTag) as? UIImageView
+        let label = cell.contentView.viewWithTag(labelTag) as? UILabel
+        let url = cell.contentView.viewWithTag(urlTag) as? UILabel
         
         // use the provided image. Else, hide the image view
-        var imageSrc = sponsors[indexPath.row].1
+        let imageSrc = sponsors[indexPath.row].1
         if (imageSrc != "") {
             image!.image = UIImage(named: sponsors[indexPath.row].1)
-            image!.hidden = false
+            image!.isHidden = false
         } else {
-            image!.hidden = true
+            image!.isHidden = true
         }
         label!.text = sponsors[indexPath.row].0
         url!.text = sponsors[indexPath.row].2
         return cell;
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        var cell = tableView.cellForRowAtIndexPath(indexPath)
-        var link = cell?.contentView.viewWithTag(urlTag) as? UILabel
-        if (link == nil || link == "") {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.cellForRow(at: indexPath)
+        let link = cell?.contentView.viewWithTag(urlTag) as? UILabel
+        if (link == nil || link!.text == "") {
             return
         }
         // go to the link
-        let url = NSURL(string: link!.text!)!
-        if (UIApplication.sharedApplication().canOpenURL(url)) {
-            UIApplication.sharedApplication().openURL(url)
+        let url = URL(string: link!.text!)!
+        if (UIApplication.shared.canOpenURL(url)) {
+            UIApplication.shared.openURL(url)
         }
     }
 //    // Failed attempt to only show label if there is no provided image

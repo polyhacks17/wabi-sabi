@@ -30,23 +30,23 @@ class InfoViewController: UITableViewController {
     }
     
     // implement methods from tableviewdatasource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return links.count;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell;
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell;
         cell.textLabel?.text = links[indexPath.row].0;
         return cell;
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell = tableView.cellForRowAtIndexPath(indexPath);
-        var text = cell?.textLabel?.text;
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath);
+        let text = cell?.textLabel?.text;
         if (text == nil) {
             return;
         }
@@ -56,8 +56,8 @@ class InfoViewController: UITableViewController {
                 segueID = segue
             }
         }
-        performSegueWithIdentifier( segueID, sender: self )
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegue( withIdentifier: segueID!, sender: self )
+        tableView.deselectRow(at: indexPath, animated: true)
 //        let alert = UIAlertController(title: "Alert", message: "Message: \(segueID!).", preferredStyle: UIAlertControllerStyle.Alert);
 //        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil));
 //        self.presentViewController(alert, animated: true, completion: nil);

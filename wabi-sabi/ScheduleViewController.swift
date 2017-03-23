@@ -28,7 +28,7 @@ class ScheduleViewController: DownloadListViewController {
     
     override func dataURL() -> String {
         // Random number to prevent caching
-        let rand: String = NSDate().timeIntervalSince1970.description
+        let rand: String = Date().timeIntervalSince1970.description
         if debugging {
             return "https://www.polyhacks.com/eventData/test.json?uncache=" + rand
         } else {
@@ -44,9 +44,9 @@ class ScheduleViewController: DownloadListViewController {
         return "ScheduleCell"
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueScheduleInfoID {
-            var selectedPath = tableView.indexPathForSelectedRow()!
+            var selectedPath = tableView.indexPathForSelectedRow!
             
             // get data of currently selected row
             let title = tableData[selectedPath.row].0
@@ -54,22 +54,22 @@ class ScheduleViewController: DownloadListViewController {
             let time = tableData[selectedPath.row].2
             let ext_desc = tableData[selectedPath.row].3
 
-            var scheduleInfo = segue.destinationViewController as ScheduleInfoViewController
+            let scheduleInfo = segue.destination as! ScheduleInfoViewController
             scheduleInfo.title = title
             scheduleInfo.text = "Start time: \(time)\n\n\(desc)\n\n\(ext_desc)"
             
             
-            tableView.deselectRowAtIndexPath(selectedPath, animated: true)
+            tableView.deselectRow(at: selectedPath, animated: true)
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
     }
     
-    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.None)
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
     }
 }

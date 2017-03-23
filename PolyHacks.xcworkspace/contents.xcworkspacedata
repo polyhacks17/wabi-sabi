@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PolyHacks.xcodeproj">
+      location = "group:/Users/jessiepullaro/Desktop/GabeWorkingStuff/wabi-sabi/wabi-sabi.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

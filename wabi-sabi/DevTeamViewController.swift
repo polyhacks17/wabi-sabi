@@ -29,16 +29,16 @@ class DevTeamViewController: UITableViewController {
     }
     
     // implement methods from tableviewdatasource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return members.count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return members[section].1.count;
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("DevTeamCells", forIndexPath: indexPath) as UITableViewCell;
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DevTeamCells", for: indexPath) as UITableViewCell;
         var (site, username, link) = members[indexPath.section].1[indexPath.row]
         cell.textLabel?.text = site + " (\(username))"
         cell.detailTextLabel?.text = link
@@ -51,21 +51,21 @@ class DevTeamViewController: UITableViewController {
         return cell;
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell = tableView.cellForRowAtIndexPath(indexPath);
-        var link = cell?.detailTextLabel?.text;
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath);
+        let link = cell?.detailTextLabel?.text;
         if (link == nil) {
             return
         }
         // call the number
-        let url = NSURL(string: link!)!
-        if (UIApplication.sharedApplication().canOpenURL(url)) {
-            UIApplication.sharedApplication().openURL(url)
+        let url = URL(string: link!)!
+        if (UIApplication.shared.canOpenURL(url)) {
+            UIApplication.shared.openURL(url)
         }
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return members[section].0
     }
 

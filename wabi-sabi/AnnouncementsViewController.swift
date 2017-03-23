@@ -27,7 +27,7 @@ class AnnouncementsViewController: DownloadListViewController {
     
     override func dataURL() -> String {
         // Random number to prevent caching
-        let rand: String = NSDate().timeIntervalSince1970.description
+        let rand: String = Date().timeIntervalSince1970.description
         if debugging {
             return "https://www.polyhacks.com/eventData/test.json?uncache=" + rand
         } else {
