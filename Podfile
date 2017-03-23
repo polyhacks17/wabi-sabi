@@ -6,6 +6,10 @@ target 'PolyHacks' do
   use_frameworks!
 
   pod 'ImageScrollView', :git => 'https://github.com/huynguyencong/ImageScrollView.git', :commit => '4ed28cafd55b313345fbd25d86c6bb53d4ed7072'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase'
+  pod 'Firebase/Database'
 
   # Pods for PolyHacks
 

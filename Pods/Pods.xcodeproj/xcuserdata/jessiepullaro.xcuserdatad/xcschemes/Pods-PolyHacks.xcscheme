@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71C9552BC880B0BC176558AFEDAC555F"
+               BlueprintIdentifier = "64BF219C4BD08C1C4CDF4EEA0C076FFC"
                BuildableName = "Pods_PolyHacks.framework"
                BlueprintName = "Pods-PolyHacks"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "71C9552BC880B0BC176558AFEDAC555F"
+            BlueprintIdentifier = "64BF219C4BD08C1C4CDF4EEA0C076FFC"
             BuildableName = "Pods_PolyHacks.framework"
             BlueprintName = "Pods-PolyHacks"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "71C9552BC880B0BC176558AFEDAC555F"
-            BuildableName = "Pods_PolyHacks.framework"
-            BlueprintName = "Pods-PolyHacks"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
