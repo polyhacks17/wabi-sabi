@@ -14,7 +14,9 @@ class AnnouncementsViewController: DownloadListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // remove badgeValue if there is one
         let myTabBar = self.tabBarController! as UITabBarController // Getting Tab Bar
         (myTabBar.tabBar.items![1]).badgeValue = nil
