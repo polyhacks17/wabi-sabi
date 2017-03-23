@@ -53,13 +53,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // this callback will not be fired till the user taps on the notification launching the application.
         // TODO: Handle data of notification
         
-        // Print message ID.
-//        if let messageID = userInfo[gcmMessageIDKey] {
-//            print("Message ID: \(messageID)")
-//        }
-        
         // Print full message.
         print(userInfo)
+        
+        let myTabBar = self.window?.rootViewController as! UITabBarController // Getting Tab Bar
+        if (application.applicationState == .active) {
+            // if not looking at schedule, add a 1
+//            myTabBar.toolbarItems?[1].badgeValue
+            print("I'm about to set you tabe number to jwoij 111");
+            (myTabBar.tabBar.items![1]).badgeValue = "1"
+        } else if (application.applicationState == .inactive || application.applicationState == .background){
+            // go to schedule tab
+            myTabBar.selectedIndex = 1 //Selecting tab here
+        }
+        // refresh content automatically in viewWillAppear()
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
@@ -68,13 +75,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // this callback will not be fired till the user taps on the notification launching the application.
         // TODO: Handle data of notification
         
-        // Print message ID.
-//        if let messageID = userInfo[gcmMessageIDKey] {
-//            print("Message ID: \(messageID)")
-//        }
-        
         // Print full message.
         print(userInfo)
+        
+        let myTabBar = self.window?.rootViewController as! UITabBarController // Getting Tab Bar
+        if (application.applicationState == .active) {
+            // if not looking at schedule, add a 1
+            //            myTabBar.toolbarItems?[1].badgeValue
+            print("I'm about to set you tabe number to jwoij 111");
+            (myTabBar.tabBar.items![1]).badgeValue = "1"
+        } else if (application.applicationState == .inactive || application.applicationState == .background){
+            // go to schedule tab
+            myTabBar.selectedIndex = 1 //Selecting tab here
+        }
+        // refresh content automatically in viewWillAppear()
+
         
         completionHandler(UIBackgroundFetchResult.newData)
     }

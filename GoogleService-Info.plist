@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>653367825475-d6gas8i6nrkkvhjtkqkikkh34ms0omff.apps.googleusercontent.com</string>
+	<string>653367825475-i7u7dkblcvuuu2ln7b9o3nha6mtrdvc3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.653367825475-d6gas8i6nrkkvhjtkqkikkh34ms0omff</string>
+	<string>com.googleusercontent.apps.653367825475-i7u7dkblcvuuu2ln7b9o3nha6mtrdvc3</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBjws6YUjf5TyoQ5KrQlqCCTDpblDOeEr8</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.gabriel.hutchison.PolyHacks</string>
+	<string>com.gabriel.hutchison.wabi-sabi</string>
 	<key>PROJECT_ID</key>
 	<string>polyhacks2017</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:653367825475:ios:2574550201cb2e8c</string>
+	<string>1:653367825475:ios:c0eb700bf19f826e</string>
 	<key>DATABASE_URL</key>
 	<string>https://polyhacks2017.firebaseio.com</string>
 </dict>

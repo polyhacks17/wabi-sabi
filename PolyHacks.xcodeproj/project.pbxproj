@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E16731BD7EF4AD50BF04020 /* Pods_PolyHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECBA1B08B1FFB129F20D3E2 /* Pods_PolyHacks.framework */; };
-		210D68B71E84174D00BA24D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210D68B61E84174D00BA24D2 /* GoogleService-Info.plist */; };
-		210D68B81E84174D00BA24D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210D68B61E84174D00BA24D2 /* GoogleService-Info.plist */; };
+		2184D2C21E841D95005E404A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2184D2C11E841D95005E404A /* GoogleService-Info.plist */; };
+		2184D2C31E841D95005E404A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2184D2C11E841D95005E404A /* GoogleService-Info.plist */; };
 		441926A21E82C026003F427E /* ist_map_bottomfloor.png in Resources */ = {isa = PBXBuildFile; fileRef = 441926A01E82C026003F427E /* ist_map_bottomfloor.png */; };
 		441926A31E82C026003F427E /* ist_map_eventfloor.png in Resources */ = {isa = PBXBuildFile; fileRef = 441926A11E82C026003F427E /* ist_map_eventfloor.png */; };
 		441AFC781E777C1B003290E2 /* UIVerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AFC771E777C1B003290E2 /* UIVerticalAlignLabel.swift */; };
@@ -51,7 +51,7 @@
 
 /* Begin PBXFileReference section */
 		210D68B51E84170F00BA24D2 /* PolyHacks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PolyHacks.entitlements; sourceTree = "<group>"; };
-		210D68B61E84174D00BA24D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2184D2C11E841D95005E404A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		346E4BEB69D5C53E1E4DE818 /* Pods-PolyHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyHacks.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolyHacks/Pods-PolyHacks.release.xcconfig"; sourceTree = "<group>"; };
 		40337EF125ADE410E58AEAF4 /* Pods-PolyHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyHacks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolyHacks/Pods-PolyHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		441926A01E82C026003F427E /* ist_map_bottomfloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ist_map_bottomfloor.png; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				210D68B51E84170F00BA24D2 /* PolyHacks.entitlements */,
-				210D68B61E84174D00BA24D2 /* GoogleService-Info.plist */,
+				2184D2C11E841D95005E404A /* GoogleService-Info.plist */,
 				4450A3EC1E71ECBB00CF6A9F /* wabi-sabi */,
 				4450A4041E71ECBB00CF6A9F /* wabi-sabiTests */,
 				4450A3EB1E71ECBB00CF6A9F /* Products */,
@@ -286,6 +286,9 @@
 						DevelopmentTeam = KWCJ6K4TM9;
 						LastSwiftMigration = 0820;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -325,7 +328,7 @@
 			files = (
 				4450A3F71E71ECBB00CF6A9F /* Main.storyboard in Resources */,
 				441926A21E82C026003F427E /* ist_map_bottomfloor.png in Resources */,
-				210D68B71E84174D00BA24D2 /* GoogleService-Info.plist in Resources */,
+				2184D2C21E841D95005E404A /* GoogleService-Info.plist in Resources */,
 				4450A4571E72426500CF6A9F /* fpu_sga_upscaled.png in Resources */,
 				449E83D61E79849B00A7E067 /* skjohnson.png in Resources */,
 				441926A31E82C026003F427E /* ist_map_eventfloor.png in Resources */,
@@ -345,7 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210D68B81E84174D00BA24D2 /* GoogleService-Info.plist in Resources */,
+				2184D2C31E841D95005E404A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
